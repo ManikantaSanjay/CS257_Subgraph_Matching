@@ -1,7 +1,3 @@
-//
-// Created by ssunah on 6/22/18.
-//
-
 #ifndef SUBGRAPHMATCHING_GRAPH_H
 #define SUBGRAPHMATCHING_GRAPH_H
 
@@ -10,10 +6,6 @@
 
 #include "configuration/types.h"
 #include "configuration/config.h"
-
-/**
- * A graph is stored as the CSR format.
- */
 
 class Graph {
 private:

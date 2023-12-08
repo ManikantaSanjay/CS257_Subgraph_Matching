@@ -12,7 +12,7 @@
 #include <cmath>
 #include <ctime>
 
-#include <omp.h> //OpenMP
+// #include <omp.h> //OpenMP
 
 #include <iostream>
 #include <vector>

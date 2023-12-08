@@ -33,7 +33,13 @@ const int PACK_MASK = PACK_WIDTH - 1;
 
 const size_t PACK_NODE_POOL_SIZE = 1024000000;
 
-const int CACHE_LINE_SIZE = sysconf (_SC_LEVEL1_DCACHE_LINESIZE); // in byte.
+#ifdef _SC_LEVEL1_DCACHE_LINESIZE
+const int CACHE_LINE_SIZE = sysconf(_SC_LEVEL1_DCACHE_LINESIZE); // in bytes
+#else
+// Provide a fallback cache line size or another method to determine it.
+const int CACHE_LINE_SIZE = 64; // A common cache line size in bytes
+#endif
+
 struct PackNode
 {
     PackBase base;
