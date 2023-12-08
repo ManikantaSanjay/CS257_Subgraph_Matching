@@ -9,8 +9,6 @@ This research analyzes eight leading in-memory subgraph matching algorithms, inc
 
 We also compare these algorithms against Glasgow, a constraint programming-based algorithm. Our findings show the strengths of different methods in various aspects, leading to recommendations for specific scenarios based on graph density and query size.
 
-For an in-depth understanding, refer to our SIGMOD'2020 paper "In-Memory Subgraph Matching: an In-depth Study" by Dr. Shixuan Sun and Prof. Qiong Luo. Please cite this paper if you use our code.
-
 ## Compilation
 To compile the source code, navigate to the project's root directory and execute:
 
