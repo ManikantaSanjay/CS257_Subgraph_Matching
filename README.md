@@ -95,9 +95,6 @@ Examples of command-line execution are provided for various configurations.
 ## Recommendations
 We suggest using GQL, CFL, or DPiso for filtering; GQL or RI for ordering; and always LFTJ for enumeration. Enable failing set pruning for large queries and QFilter for dense graphs.
 
-## Experiment Datasets
-Access the real-world datasets used in our paper [here](dataset-link). Synthetic datasets instructions are in the paper.
-
 ## Command-Line Execution Examples
 
 ### Basic Execution
