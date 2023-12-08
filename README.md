@@ -1,7 +1,7 @@
 
 # Subgraph Matching
 ## Introduction
-This research analyzes eight leading in-memory subgraph matching algorithms, including QuickSI, GraphQL, CFL, CECI, DP-iso, RI, and VF2++. We evaluate them based on:
+This project analyzes eight leading in-memory subgraph matching algorithms, including QuickSI, GraphQL, CFL, CECI, DP-iso, RI, and VF2++. We evaluate them based on:
 1. Vertex filtering methods in data graphs.
 2. Techniques for ordering query vertices.
 3. Strategies for enumerating partial results.
