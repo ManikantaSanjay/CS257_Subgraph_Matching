@@ -1,7 +1,3 @@
-//
-// Created by ssunah on 11/20/18.
-//
-
 #include "EvaluateQuery.h"
 #include "utility/computesetintersection.h"
 #include <vector>
