@@ -1,7 +1,3 @@
-//
-// Created by ssunah on 11/20/18.
-//
-
 #include "BuildTable.h"
 #include <vector>
 #include <algorithm>
