@@ -1,6 +1,6 @@
-//
-// Created by ssunah on 11/30/17.
-//
+
+
+
 
 #include "computesetintersection.h"
 #include <cstdint>
@@ -214,7 +214,7 @@ void ComputeSetIntersection::ComputeCNMergeBasedAVX2(const VertexID* larray, con
                 __m256i mask = _mm256_cmpeq_epi32(u_elements, v_elements);
                 auto real_mask = _mm256_movemask_epi8(mask);
                 if (real_mask != 0) {
-                    // at most 1 element
+                    
                     *cur_back_ptr = larray[li];
                     cur_back_ptr += 1;
                 }
@@ -298,7 +298,7 @@ void ComputeSetIntersection::ComputeCNMergeBasedAVX2(const VertexID* larray, con
                 }
             }
             if (larray[li] == rarray[ri]) {
-                // write back
+                
                 cn[cn_count++] = larray[li];
 
                 ++li;
@@ -455,7 +455,7 @@ const ui ComputeSetIntersection::BinarySearchForGallopingSearchAVX2(const Vertex
         }
     }
 
-    // linear search fallback, be careful with operator>> and operation+ priority
+    
     __m256i pivot_element = _mm256_set1_epi32(val);
     for (; offset_beg + 7 < offset_end; offset_beg += 8) {
         __m256i elements = _mm256_loadu_si256(reinterpret_cast<const __m256i *>(array + offset_beg));
@@ -482,7 +482,7 @@ const ui ComputeSetIntersection::GallopingSearchAVX2(const VertexID* array, ui o
         return offset_end;
     }
 
-    // linear search
+    
     __m256i pivot_element = _mm256_set1_epi32(val);
     if (offset_end - offset_beg >= 8) {
         __m256i elements = _mm256_loadu_si256(reinterpret_cast<const __m256i *>(array + offset_beg));
@@ -499,7 +499,7 @@ const ui ComputeSetIntersection::GallopingSearchAVX2(const VertexID* array, ui o
         if (mask != cmp_mask) { return offset_beg + (_popcnt32(mask) >> 2); }
     }
 
-    // galloping, should add pre-fetch later
+    
     auto jump_idx = 8u;
     while (true) {
         auto peek_idx = offset_beg + jump_idx;
@@ -649,7 +649,7 @@ void ComputeSetIntersection::ComputeCNMergeBasedAVX512(const VertexID* larray, c
             while (true) {
                 __mmask16 mask = _mm512_cmpeq_epi32_mask(u_elements, v_elements);
                 if (mask != 0x0000) {
-                    // write back
+                    
                     _mm512_mask_compressstoreu_epi32(cur_back_ptr, mask, u_elements);
                     cur_back_ptr += _popcnt32(mask);
                 }
@@ -679,7 +679,7 @@ void ComputeSetIntersection::ComputeCNMergeBasedAVX512(const VertexID* larray, c
             while (true) {
                 __mmask16 mask = _mm512_cmpeq_epi32_mask(u_elements_per, v_elements_per);
                 if (mask != 0x0000) {
-                    // write back
+                    
                     _mm512_mask_compressstoreu_epi32(cur_back_ptr, mask, u_elements_per);
                     cur_back_ptr += _popcnt32(mask);
                 }
@@ -730,7 +730,7 @@ void ComputeSetIntersection::ComputeCNMergeBasedAVX512(const VertexID* larray, c
                 }
             }
             if (larray[li] == rarray[ri]) {
-                // write back
+                
                 cn[cn_count++] = larray[li];
 
                 li += 1;
@@ -1067,7 +1067,7 @@ const ui ComputeSetIntersection::GallopingSearch(const VertexID *src, const ui b
     if (src[end - 1] < target) {
         return end;
     }
-    // galloping
+    
     if (src[begin] >= target) {
         return begin;
     }
@@ -1110,7 +1110,7 @@ const ui ComputeSetIntersection::BinarySearch(const VertexID *src, const ui begi
         }
     }
 
-    // linear search fallback
+    
     for (auto offset = offset_begin; offset < offset_end; ++offset) {
         if (src[offset] >= target) {
             return (ui)offset;

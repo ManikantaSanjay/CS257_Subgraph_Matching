@@ -1,6 +1,6 @@
-//
-// Get from Dr. Lemire.
-//
+
+
+
 
 #include "bitsetoperation.h"
 
@@ -82,8 +82,8 @@ bool BitsetOperation::checkBitset(const uint64_t *bitset, uint32_t pos) {
     const uint64_t p = pos;
     __asm volatile("shrx %1, %0, %0"             \
                    : "+r"(word)                \
-                   :            /* read/write */ \
-                   "r"(p)       /* read only */  \
+                   :            \
+                   "r"(p)        \
                    );
     return (bool)(word & 1);
 }
@@ -126,7 +126,7 @@ uint32_t BitsetOperation::mergeIntersection(const uint32_t *a, uint32_t a_count,
             goto SKIP_FIRST_COMPARE;
         }
     }
-    return (output - initout);  // NOTREACHED
+    return (output - initout);  
 }
 
 uint32_t BitsetOperation::skewIntersection(const uint32_t *small, uint32_t small_count, const uint32_t *large,

@@ -21,7 +21,7 @@ public:
                            ui *&order, TreeNode *&tree,   std::vector<std::unordered_map<VertexID, std::vector<VertexID >>> &TE_Candidates,
                            std::vector<std::vector<std::unordered_map<VertexID, std::vector<VertexID>>>> &NTE_Candidates);
 
-    // static bool VCFilter(const Graph* data_graph, const Graph* query_graph, ui **&candidates, ui *&candidates_count);
+    
 
     static void computeCandidateWithNLF(const Graph *data_graph, const Graph *query_graph, VertexID query_vertex,
                                         ui &count, ui *buffer = NULL);
@@ -56,4 +56,4 @@ private:
 };
 
 
-#endif //SUBGRAPHMATCHING_FILTERVERTICES_H
+#endif 

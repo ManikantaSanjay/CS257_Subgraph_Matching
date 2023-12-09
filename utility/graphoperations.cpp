@@ -1,6 +1,6 @@
-//
-// Created by ssunah on 6/23/18.
-//
+
+
+
 
 #include "graphoperations.h"
 #include <memory.h>
@@ -10,10 +10,10 @@ void GraphOperations::getKCore(const Graph *graph, int *core_table) {
     int vertices_count = graph->getVerticesCount();
     int max_degree = graph->getGraphMaxDegree();
 
-    int* vertices = new int[vertices_count];          // Vertices sorted by degree.
-    int* position = new int[vertices_count];          // The position of vertices in vertices array.
-    int* degree_bin = new int[max_degree + 1];      // Degree from 0 to max_degree.
-    int* offset = new int[max_degree + 1];          // The offset in vertices array according to degree.
+    int* vertices = new int[vertices_count];          
+    int* position = new int[vertices_count];          
+    int* degree_bin = new int[max_degree + 1];      
+    int* offset = new int[max_degree + 1];          
 
     std::fill(degree_bin, degree_bin + (max_degree + 1), 0);
 
@@ -52,15 +52,15 @@ void GraphOperations::getKCore(const Graph *graph, int *core_table) {
 
             if (core_table[u] > core_table[v]) {
 
-                // Get the position and vertex which is with the same degree
-                // and at the start position of vertices array.
+                
+                
                 int cur_degree_u = core_table[u];
                 int position_u = position[u];
                 int position_w = offset[cur_degree_u];
                 int w = vertices[position_w];
 
                 if (u != w) {
-                    // Swap u and w.
+                    
                     position[u] = position_w;
                     position[w] = position_u;
                     vertices[position_u] = w;
@@ -124,7 +124,7 @@ void GraphOperations::match_bfs(int* col_ptrs, int* col_ids, int* match, int* ro
                         col = row_match[row];
 
                         if(col == -1) {
-                            // Find an augmenting path. Then, trace back and modify the augmenting path.
+                            
                             while(row != -1) {
                                 col = previous[row];
                                 temp = match[col];
@@ -136,7 +136,7 @@ void GraphOperations::match_bfs(int* col_ptrs, int* col_ids, int* match, int* ro
                             queue_size = 0;
                             break;
                         } else {
-                            // Continue to construct the match.
+                            
                             queue[queue_size++] = col;
                         }
                     }

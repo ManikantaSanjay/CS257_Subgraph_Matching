@@ -1,6 +1,3 @@
-//
-// Created by ssunah on 11/20/18.
-//
 
 #ifndef SUBGRAPHMATCHING_BUILDTABLE_H
 #define SUBGRAPHMATCHING_BUILDTABLE_H

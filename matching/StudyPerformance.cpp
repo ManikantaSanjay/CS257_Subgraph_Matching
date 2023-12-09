@@ -1,6 +1,6 @@
-//
-// Created by ssunah on 12/3/18.
-//
+
+
+
 
 #include <chrono>
 #include <future>
@@ -180,14 +180,14 @@ int main(int argc, char** argv) {
         exit(-1);
     }
 
-    // Sort the candidates to support the set intersections
+    
     if (input_filter_type != "CECI")
         FilterVertices::sortCandidates(candidates, candidates_count, query_graph->getVerticesCount());
 
     end = std::chrono::high_resolution_clock::now();
     double filter_vertices_time_in_ns = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count();
 
-    // Compute the candidates false positive ratio.
+    
 #ifdef OPTIMAL_CANDIDATES
     std::vector<ui> optimal_candidates_count;
     double avg_false_positive_ratio = FilterVertices::computeCandidatesFalsePositiveRatio(data_graph, query_graph, candidates,
@@ -327,10 +327,10 @@ int main(int argc, char** argv) {
                                                            edge_matrix, candidates, candidates_count,
                                                            weight_array, dpiso_order, output_limit,
                                                            call_count);
-//        embedding_count = EvaluateQuery::exploreDPisoRecursiveStyle(data_graph, query_graph, dpiso_tree,
-//                                                           edge_matrix, candidates, candidates_count,
-//                                                           weight_array, dpiso_order, output_limit,
-//                                                           call_count);
+
+
+
+
     }
     else if (input_engine_type == "Spectrum") {
         spectrum_analysis(data_graph, query_graph, edge_matrix, candidates, candidates_count, output_limit, spectrum, time_limit);

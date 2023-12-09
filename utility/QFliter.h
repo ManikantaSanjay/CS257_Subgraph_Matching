@@ -1,6 +1,6 @@
-//
-// Created by ssunah on 11/1/19.
-//
+
+
+
 
 #ifndef SUBGRAPHMATCHING_QFLITER_H
 #define SUBGRAPHMATCHING_QFLITER_H
@@ -12,13 +12,13 @@
 #include <cmath>
 #include <ctime>
 
-// #include <omp.h> //OpenMP
+
 
 #include <iostream>
 #include <vector>
 #include <fstream>
 #include <set>
-#include <atomic> //CAS
+#include <atomic> 
 #include <chrono>
 
 #include "han/intersection_algos.hpp"
@@ -78,4 +78,4 @@ struct BSRGraph {
     }
 };
 
-#endif //SUBGRAPHMATCHING_QFLITER_H
+#endif 

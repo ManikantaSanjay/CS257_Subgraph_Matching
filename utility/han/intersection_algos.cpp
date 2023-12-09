@@ -8,9 +8,9 @@
 #define MM_STORE_SI_128 _mm_storeu_si128
 #endif
 
-constexpr int cyclic_shift1 = _MM_SHUFFLE(0,3,2,1); //rotating right
-constexpr int cyclic_shift2 = _MM_SHUFFLE(2,1,0,3); //rotating left
-constexpr int cyclic_shift3 = _MM_SHUFFLE(1,0,3,2); //between
+constexpr int cyclic_shift1 = _MM_SHUFFLE(0,3,2,1); 
+constexpr int cyclic_shift2 = _MM_SHUFFLE(2,1,0,3); 
+constexpr int cyclic_shift3 = _MM_SHUFFLE(1,0,3,2); 
 
 static const __m128i all_zero_si128 = _mm_setzero_si128();
 static const __m128i all_one_si128 = _mm_set_epi32(0xffffffff, 0xffffffff,
@@ -43,11 +43,11 @@ uint32_t* prepare_shuffling_dict_avx()
         int count=0, rest=7;
         for(int b=0; b<8; ++b){
             if(i & (1 << b)){
-                // n index at pos p - move nth element to pos p
-                arr[i*8 + count] = b; // move all set bits to beginning
+                
+                arr[i*8 + count] = b; 
                 ++count;
             }else{
-                arr[i*8 + rest] = b; // move rest at the end
+                arr[i*8 + rest] = b; 
                 --rest;
             }
         }
@@ -101,10 +101,10 @@ int intersect_scalargalloping_uint(int *set_a, int size_a,
     
     int j = 0, size_c = 0;    
     for (int i = 0; i < size_a; ++i) {
-        // double-jump:
+        
         int r = 1;
         while (j + r < size_b && set_a[i] > set_b[j + r]) r <<= 1;
-        // binary search:
+        
         int right = (j + r < size_b) ? (j + r) : (size_b - 1);
         if (set_b[right] < set_a[i]) break;        
         int left = j + (r >> 1);
@@ -132,10 +132,10 @@ int intersect_scalargalloping_bsr(int* bases_a, int* states_a, int size_a,
 
     int j = 0, size_c = 0;
     for (int i = 0; i < size_a; ++i) {
-        // double-jump:
+        
         int r = 1;
         while (j + r < size_b && bases_a[i] > bases_b[j + r]) r <<= 1;
-        // binary search:
+        
         int right = (j + r < size_b) ? (j + r) : (size_b - 1);
         if (bases_b[right] < bases_a[i]) break;        
         int left = j + (r >> 1);
@@ -164,10 +164,10 @@ int intersect_simdgalloping_uint(int *set_a, int size_a,
     int i = 0, j = 0, size_c = 0;
     int qs_b = size_b - (size_b & 3);
     for (i = 0; i < size_a; ++i) {
-        // double-jump:
+        
         int r = 1;
         while (j + (r << 2) < qs_b && set_a[i] > set_b[j + (r << 2) + 3]) r <<= 1;
-        // binary search:
+        
         int upper = (j + (r << 2) < qs_b) ? (r) : ((qs_b - j - 4) >> 2);
         if (set_b[j + (upper << 2) + 3] < set_a[i]) break;        
         int lower = (r >> 1);
@@ -211,10 +211,10 @@ int intersect_simdgalloping_bsr(int* bases_a, int* states_a, int size_a,
     int i = 0, j = 0, size_c = 0;
     int qs_b = size_b - (size_b & 3);
     for (i = 0; i < size_a; ++i) {
-        // double-jump:
+        
         int r = 1;
         while (j + (r << 2) < qs_b && bases_a[i] > bases_b[j + (r << 2) + 3]) r <<= 1;
-        // binary search:
+        
         int upper = (j + (r << 2) < qs_b) ? (r) : ((qs_b - j - 4) >> 2);
         if (bases_b[j + (upper << 2) + 3] < bases_a[i]) break;        
         int lower = (r >> 1);
@@ -257,12 +257,12 @@ int* prepare_byte_check_mask_dict2()
 
     auto trans_c_s = [](const int c) -> int {
         switch (c) {
-            case 0: return -1; // no match
+            case 0: return -1; 
             case 1: return 0;
             case 2: return 1;
             case 4: return 2;
             case 8: return 3;
-            default: return 4; // multiple matches.
+            default: return 4; 
         }
     };
 
@@ -299,7 +299,7 @@ uint8_t * prepare_match_shuffle_dict2()
 
     for (int x = 0; x < 256; ++x) {
         for (int i = 0; i < 4; ++i) {
-            uint8_t c = (x >> (i << 1)) & 3; // c = 0, 1, 2, 3
+            uint8_t c = (x >> (i << 1)) & 3; 
             int pos = x * 16 + i * 4;
             for (uint8_t j = 0; j < 4; ++j)
                 dict[pos + j] = c * 4 + j;
@@ -332,12 +332,12 @@ int intersect_qfilter_uint_b4(int *set_a, int size_a,
     int qs_a = size_a - (size_a & 3);
     int qs_b = size_b - (size_b & 3);
 
-    // for (int x = 0; x < 65536; x += 16)
-    //     _mm_prefetch((char*) (byte_check_mask_dict + x), _MM_HINT_T2);
-    // for (int x = 0; x < 256; x += 4)
-    //     _mm_prefetch((char*) (match_shuffle_dict + x), _MM_HINT_T0);
-    // _mm_prefetch((char*) (byte_check_group_a_order), _MM_HINT_T0);
-    // _mm_prefetch((char*) (byte_check_group_b_order), _MM_HINT_T0);
+    
+    
+    
+    
+    
+    
     
     while (i < qs_a && j < qs_b) {
         __m128i v_a = _mm_lddqu_si128((__m128i*)(set_a + i));
@@ -345,8 +345,8 @@ int intersect_qfilter_uint_b4(int *set_a, int size_a,
         
         int a_max = set_a[i + 3];
         int b_max = set_b[j + 3];
-        // i += (a_max <= b_max) * 4;
-        // j += (b_max <= a_max) * 4;
+        
+        
         if (a_max == b_max) {
             i += 4;
             j += 4;
@@ -391,7 +391,7 @@ int intersect_qfilter_uint_b4(int *set_a, int size_a,
                 }
             }
         }
-        if (ms_order == -2) continue; // "no match" in this two block.
+        if (ms_order == -2) continue; 
 
         __m128i sf_v_b = _mm_shuffle_epi8(v_b, match_shuffle_dict[ms_order]);
         __m128i cmp_mask = _mm_cmpeq_epi32(v_a, sf_v_b);
@@ -439,8 +439,8 @@ int intersect_qfilter_uint_b4_v2(int *set_a, int size_a,
                  __m128i sf_v_b = _mm_shuffle_epi8(v_b, match_shuffle_dict[ms_order]);
                 cmp_mask = _mm_cmpeq_epi32(v_a, sf_v_b);       
             } else {
-                __m128i cmp_mask0 = _mm_cmpeq_epi32(v_a, v_b); // pairwise comparison
-                __m128i rot1 = _mm_shuffle_epi32(v_b, cyclic_shift1);   // shuffling
+                __m128i cmp_mask0 = _mm_cmpeq_epi32(v_a, v_b); 
+                __m128i rot1 = _mm_shuffle_epi32(v_b, cyclic_shift1);   
                 __m128i cmp_mask1 = _mm_cmpeq_epi32(v_a, rot1);
                 __m128i rot2 = _mm_shuffle_epi32(v_b, cyclic_shift2);
                 __m128i cmp_mask2 = _mm_cmpeq_epi32(v_a, rot2);
@@ -551,7 +551,7 @@ int intersect_qfilter_bsr_b4(int* bases_a, int* states_a, int size_a,
             }
         }
         
-        if (ms_order == -2) continue; // "no match" in this two block.
+        if (ms_order == -2) continue; 
 
         __m128i sf_base_b = _mm_shuffle_epi8(base_b, match_shuffle_dict[ms_order]);
         __m128i sf_state_b = _mm_shuffle_epi8(state_b, match_shuffle_dict[ms_order]);
@@ -695,8 +695,8 @@ int intersect_shuffle_uint_b4(int *set_a, int size_a,
 
         int a_max = set_a[i + 3];
         int b_max = set_b[j + 3];
-        // i += (a_max <= b_max) * 4;
-        // j += (b_max <= a_max) * 4;
+        
+        
         if (a_max == b_max) {
             i += 4;
             j += 4;
@@ -710,8 +710,8 @@ int intersect_shuffle_uint_b4(int *set_a, int size_a,
             _mm_prefetch((char*) (set_b + j), _MM_HINT_NTA);
         }
 
-        __m128i cmp_mask0 = _mm_cmpeq_epi32(v_a, v_b); // pairwise comparison
-        __m128i rot1 = _mm_shuffle_epi32(v_b, cyclic_shift1);   // shuffling
+        __m128i cmp_mask0 = _mm_cmpeq_epi32(v_a, v_b); 
+        __m128i rot1 = _mm_shuffle_epi32(v_b, cyclic_shift1);   
         __m128i cmp_mask1 = _mm_cmpeq_epi32(v_a, rot1);
         __m128i rot2 = _mm_shuffle_epi32(v_b, cyclic_shift2);
         __m128i cmp_mask2 = _mm_cmpeq_epi32(v_a, rot2);
@@ -770,7 +770,7 @@ int intersect_shuffle_uint_b8(int *set_a, int size_a,
             _mm_prefetch((char*) (set_b + j), _MM_HINT_NTA);
         }
 
-        // a0 -- b0:
+        
         __m128i cmp_mask0 = _mm_cmpeq_epi32(v_a0, v_b0); 
         __m128i rot1 = _mm_shuffle_epi32(v_b0, cyclic_shift1);   
         __m128i cmp_mask1 = _mm_cmpeq_epi32(v_a0, rot1);
@@ -779,7 +779,7 @@ int intersect_shuffle_uint_b8(int *set_a, int size_a,
         __m128i rot3 = _mm_shuffle_epi32(v_b0, cyclic_shift3);
         __m128i cmp_mask3 = _mm_cmpeq_epi32(v_a0, rot3);
 
-        // a0 -- b1:
+        
         __m128i cmp_mask4 = _mm_cmpeq_epi32(v_a0, v_b1); 
         __m128i rot5 = _mm_shuffle_epi32(v_b1, cyclic_shift1);   
         __m128i cmp_mask5 = _mm_cmpeq_epi32(v_a0, rot5);
@@ -805,7 +805,7 @@ int intersect_shuffle_uint_b8(int *set_a, int size_a,
         _mm_storeu_si128((__m128i*)(set_c + size_c), px);
         size_c += _mm_popcnt_u32(maskx);
 
-        // a1 -- b0:
+        
         cmp_mask0 = _mm_cmpeq_epi32(v_a1, v_b0); 
         rot1 = _mm_shuffle_epi32(v_b0, cyclic_shift1);   
         cmp_mask1 = _mm_cmpeq_epi32(v_a1, rot1);
@@ -814,7 +814,7 @@ int intersect_shuffle_uint_b8(int *set_a, int size_a,
         rot3 = _mm_shuffle_epi32(v_b0, cyclic_shift3);
         cmp_mask3 = _mm_cmpeq_epi32(v_a1, rot3);
 
-        // a1 -- b1:
+        
         cmp_mask4 = _mm_cmpeq_epi32(v_a1, v_b1); 
         rot5 = _mm_shuffle_epi32(v_b1, cyclic_shift1);   
         cmp_mask5 = _mm_cmpeq_epi32(v_a1, rot5);
@@ -888,26 +888,26 @@ int intersect_shuffle_bsr_b4(int* bases_a, int* states_a, int size_a,
             _mm_prefetch((char*) (states_b + j), _MM_HINT_NTA);
         }        
 
-        // shift0:
+        
         __m128i cmp_mask0 = _mm_cmpeq_epi32(base_a, base_b);
         __m128i state_c0 = _mm_and_si128(
                 _mm_and_si128(state_a, state_b), cmp_mask0);
 
-        // shift1:
+        
         __m128i base_sf1 = _mm_shuffle_epi32(base_b, cyclic_shift1);
         __m128i state_sf1 = _mm_shuffle_epi32(state_b, cyclic_shift1);
         __m128i cmp_mask1 = _mm_cmpeq_epi32(base_a, base_sf1);
         __m128i state_c1 = _mm_and_si128(
                 _mm_and_si128(state_a, state_sf1), cmp_mask1);
 
-        // shift2:
+        
         __m128i base_sf2 = _mm_shuffle_epi32(base_b, cyclic_shift2);
         __m128i state_sf2 = _mm_shuffle_epi32(state_b, cyclic_shift2);
         __m128i cmp_mask2 = _mm_cmpeq_epi32(base_a, base_sf2);
         __m128i state_c2 = _mm_and_si128(
                 _mm_and_si128(state_a, state_sf2), cmp_mask2);
 
-        // shift3:
+        
         __m128i base_sf3 = _mm_shuffle_epi32(base_b, cyclic_shift3);
         __m128i state_sf3 = _mm_shuffle_epi32(state_b, cyclic_shift3);
         __m128i cmp_mask3 = _mm_cmpeq_epi32(base_a, base_sf3);
@@ -966,7 +966,7 @@ int intersect_bmiss_uint_b4(int *set_a, int size_a,
         __m128i v_a = _mm_lddqu_si128((__m128i*)(set_a + i));
         __m128i v_b = _mm_lddqu_si128((__m128i*)(set_b + j));
 
-        // byte-wise check:
+        
         __m128i byte_group_a0 = _mm_shuffle_epi8(v_a, byte_check_group_a_order[0]);
         __m128i byte_group_b0 = _mm_shuffle_epi8(v_b, byte_check_group_b_order[0]);
         __m128i byte_check_mask0 = _mm_cmpeq_epi8(byte_group_a0, byte_group_b0);
@@ -987,7 +987,7 @@ int intersect_bmiss_uint_b4(int *set_a, int size_a,
             continue;
         }
 
-        // word-wise check:
+        
         __m128i word_group_a01 = _mm_shuffle_epi32(v_a, word_check_shuffle_a01);
         __m128i word_group_b01 = _mm_shuffle_epi32(v_b, word_check_shuffle_b01);
         __m128i word_group_a23 = _mm_shuffle_epi32(v_a, word_check_shuffle_a23);
@@ -1051,7 +1051,7 @@ int intersect_bmiss_uint_sttni_b8(int *set_a, int size_a,
         __m128i v_b0 = _mm_lddqu_si128((__m128i*)(set_b + j));
         __m128i v_b1 = _mm_lddqu_si128((__m128i*)(set_b + j + 4));
 
-        // byte-wise check by STTNI:
+        
         __m128i byte_group_a0 = _mm_shuffle_epi8(v_a0, BMISS_BC_ORD[0]);
         __m128i byte_group_a1 = _mm_shuffle_epi8(v_a1, BMISS_BC_ORD[1]);
         __m128i byte_group_a = _mm_or_si128(byte_group_a0, byte_group_a1);
@@ -1063,7 +1063,7 @@ int intersect_bmiss_uint_sttni_b8(int *set_a, int size_a,
                 _SIDD_UWORD_OPS|_SIDD_CMP_EQUAL_ANY|_SIDD_BIT_MASK);
         int r = _mm_extract_epi32(bc_mask, 0);
 
-        // word-wise check:
+        
         while (r) {
             int p = _mm_popcnt_u32((~r) & (r - 1));
             r &= (r - 1);
@@ -1130,18 +1130,18 @@ int intersect_hierainter_uint_sttni(int *set_a, int size_a,
     int hi_size_a = hierainter_offline_partition(set_a, size_a, hi_set_a);
     int hi_size_b = hierainter_offline_partition(set_b, size_b, hi_set_b);
 
-//    struct timeval time_start;
-//    struct timeval time_end;
-//    gettimeofday(&time_start, NULL);
+
+
+
 
     int hi_size_c = hierainter_online_intersect_high16bit(hi_set_a, hi_size_a,
                 hi_set_b, hi_size_b, hi_set_c);
 
-//    gettimeofday(&time_end, NULL);
-//    double run_time = (time_end.tv_sec - time_start.tv_sec) * 1000.0 +
-//                (time_end.tv_usec - time_start.tv_usec) / 1000.0;
-//    if (run_time > 10000.0) printf("hierainter_online_time=%.3fs\n", run_time / 1000.0);
-//    else printf("hierainter_online_time=%.3fms\n", run_time);
+
+
+
+
+
 
     int size_c = hierainter_offline_combine(hi_set_c, hi_size_c, set_c);
     return size_c;
@@ -1154,17 +1154,17 @@ int hierainter_offline_partition(int *set_a, int size_a, uint16_t *hi_set)
     int hi_size = 0;
 
     for (int i = 0; i < size_a; ++i) {
-        uint16_t chigh = (uint16_t)(set_a[i] >> 16); // upper 16-bit part
-        uint16_t clow = (uint16_t)(set_a[i] & 0xffff); // lower 16-bit part
-        if (chigh == high && i != 0) { // add element to the current partition
+        uint16_t chigh = (uint16_t)(set_a[i] >> 16); 
+        uint16_t clow = (uint16_t)(set_a[i] & 0xffff); 
+        if (chigh == high && i != 0) { 
             hi_set[hi_size++] = clow;
             partition_len++;
-        } else { // start new partition
-            hi_set[hi_size++] = chigh; // partition prefix
-            hi_set[hi_size++] = 0;     // reserve place for partition size
-            hi_set[hi_size++] = clow;  // write the first element
+        } else { 
+            hi_set[hi_size++] = chigh; 
+            hi_set[hi_size++] = 0;     
+            hi_set[hi_size++] = clow;  
             hi_set[partition_pos] = partition_len;
-            partition_len = 1; // reset counters
+            partition_len = 1; 
             partition_pos = hi_size - 2;
             high = chigh;            
         }
@@ -1238,7 +1238,7 @@ int hierainter_online_intersect_high16bit(uint16_t *par_a, int size_a,
         } else if (par_b[j] < par_a[i]) {
             j += par_b[j + 1] + 2;
         } else {
-            par_c[size_c++] = par_a[i];  // write partition prefix            
+            par_c[size_c++] = par_a[i];  
             uint16_t partition_len = hierainter_online_intersect_low16bit(
                     par_a + i + 2, par_a[i + 1], par_b + j + 2, par_b[j + 1],
                     par_c + size_c + 1);

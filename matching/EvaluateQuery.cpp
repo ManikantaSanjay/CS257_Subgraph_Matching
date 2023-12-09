@@ -1,3 +1,4 @@
+
 #include "EvaluateQuery.h"
 #include "utility/computesetintersection.h"
 #include <vector>
@@ -21,6 +22,17 @@ bool EvaluateQuery::exit_;
 size_t* EvaluateQuery::distribution_count_;
 #endif
 
+/**
+ * Generates the Bayesian network (BN) for a given query graph.
+ *
+ * @param query_graph The query graph.
+ * @param order The order of vertices in the query graph.
+ * @param pivot The pivot vertices in the query graph.
+ * @param bn The generated Bayesian network.
+ * @param bn_count The count of neighbors for each vertex in the Bayesian network.
+ *
+ * @returns None
+ */
 void EvaluateQuery::generateBN(const Graph *query_graph, ui *order, ui *pivot, ui **&bn, ui *&bn_count) {
     ui query_vertices_num = query_graph->getVerticesCount();
     bn_count = new ui[query_vertices_num];
@@ -49,6 +61,16 @@ void EvaluateQuery::generateBN(const Graph *query_graph, ui *order, ui *pivot, u
     }
 }
 
+/**
+ * Generates the Bayesian network (BN) for a given query graph and vertex order.
+ *
+ * @param query_graph The query graph.
+ * @param order The vertex order for generating the BN.
+ * @param bn The generated BN, represented as an adjacency matrix.
+ * @param bn_count The number of neighbors for each vertex in the BN.
+ *
+ * @returns None
+ */
 void EvaluateQuery::generateBN(const Graph *query_graph, ui *order, ui **&bn, ui *&bn_count) {
     ui query_vertices_num = query_graph->getVerticesCount();
     bn_count = new ui[query_vertices_num];
@@ -77,15 +99,30 @@ void EvaluateQuery::generateBN(const Graph *query_graph, ui *order, ui **&bn, ui
     }
 }
 
+/**
+ * Explores the graph to find embeddings of a query graph in a data graph.
+ *
+ * @param data_graph The data graph to search in.
+ * @param query_graph The query graph to find embeddings of.
+ * @param edge_matrix The matrix representing the edges in the data graph.
+ * @param candidates The candidate vertices for each query vertex.
+ * @param candidates_count The number of candidates for each query vertex.
+ * @param order The order in which to traverse the query vertices.
+ * @param pivot The pivot vertices for each query vertex.
+ * @param output_limit_num The maximum number of embeddings to find.
+ * @param call_count The number of recursive calls made during the exploration.
+ *
+ * @returns The number of embeddings found
+ */
 size_t
 EvaluateQuery::exploreGraph(const Graph *data_graph, const Graph *query_graph, Edges ***edge_matrix, ui **candidates,
                             ui *candidates_count, ui *order, ui *pivot, size_t output_limit_num, size_t &call_count) {
-    // Generate the bn.
+    
     ui **bn;
     ui *bn_count;
     generateBN(query_graph, order, pivot, bn, bn_count);
 
-    // Allocate the memory buffer.
+    
     ui *idx;
     ui *idx_count;
     ui *embedding;
@@ -95,7 +132,7 @@ EvaluateQuery::exploreGraph(const Graph *data_graph, const Graph *query_graph, E
     bool *visited_vertices;
     allocateBuffer(data_graph, query_graph, candidates_count, idx, idx_count, embedding, idx_embedding,
                    temp_buffer, valid_candidate_idx, visited_vertices);
-    // Evaluate the query.
+    
     size_t embedding_cnt = 0;
     int cur_depth = 0;
     int max_depth = query_graph->getVerticesCount();
@@ -143,7 +180,7 @@ EvaluateQuery::exploreGraph(const Graph *data_graph, const Graph *query_graph, E
     }
 
 
-    // Release the buffer.
+    
     EXIT:
     releaseBuffer(max_depth, idx, idx_count, embedding, idx_embedding, temp_buffer, valid_candidate_idx,
                   visited_vertices,
@@ -152,6 +189,20 @@ EvaluateQuery::exploreGraph(const Graph *data_graph, const Graph *query_graph, E
     return embedding_cnt;
 }
 
+/**
+ * Allocates memory for buffers used in query evaluation.
+ *
+ * @param data_graph Pointer to the data graph.
+ * @param query_graph Pointer to the query graph.
+ * @param candidates_count Array containing the number of candidates for each query vertex.
+ * @param idx Pointer to store the index of each query vertex.
+ * @param idx_count Pointer to store the count of each query vertex.
+ * @param embedding Pointer to store the embedding of each query vertex.
+ * @param idx_embedding Pointer to store the index of the embedding of each query vertex.
+ * @param temp_buffer Pointer to store temporary data.
+ * @param valid_candidate_idx Array of pointers to store the valid candidate indices for each query vertex.
+ * @param visited_vertices Array to
+ */
 void
 EvaluateQuery::allocateBuffer(const Graph *data_graph, const Graph *query_graph, ui *candidates_count, ui *&idx,
                               ui *&idx_count, ui *&embedding, ui *&idx_embedding, ui *&temp_buffer,
@@ -183,6 +234,23 @@ EvaluateQuery::allocateBuffer(const Graph *data_graph, const Graph *query_graph,
     std::fill(visited_vertices, visited_vertices + data_vertices_num, false);
 }
 
+/**
+ * Generates the valid candidate index for a given depth in the query evaluation process.
+ *
+ * @param data_graph The graph data structure.
+ * @param depth The current depth in the query evaluation process.
+ * @param embedding The embedding array.
+ * @param idx_embedding The index embedding array.
+ * @param idx_count The count of valid candidate indices.
+ * @param valid_candidate_index The array to store the valid candidate indices.
+ * @param edge_matrix The matrix of edges.
+ * @param visited_vertices The array to track visited vertices.
+ * @param bn The array of backward neighbors.
+ * @param bn_cnt The count of backward neighbors.
+ * @param order The order of vertices.
+ * @param pivot The pivot array.
+ * @param candidates
+ */
 void EvaluateQuery::generateValidCandidateIndex(const Graph *data_graph, ui depth, ui *embedding, ui *idx_embedding,
                                                 ui *idx_count, ui **valid_candidate_index, Edges ***edge_matrix,
                                                 bool *visited_vertices, ui **bn, ui *bn_cnt, ui *order, ui *pivot,
@@ -231,6 +299,20 @@ void EvaluateQuery::generateValidCandidateIndex(const Graph *data_graph, ui dept
     idx_count[depth] = valid_candidate_index_count;
 }
 
+/**
+ * Executes the LFTJ algorithm to evaluate a query on a data graph.
+ *
+ * @param data_graph The data graph to query.
+ * @param query_graph The query graph.
+ * @param edge_matrix The matrix of edges between query vertices.
+ * @param candidates The candidate vertices for each query vertex.
+ * @param candidates_count The number of candidates for each query vertex.
+ * @param order The order in which to process the query vertices.
+ * @param output_limit_num The maximum number of output embeddings to return.
+ * @param call_count The number of recursive calls made during the algorithm.
+ *
+ * @returns The number of embeddings found.
+ */
 void EvaluateQuery::releaseBuffer(ui query_vertices_num, ui *idx, ui *idx_count, ui *embedding, ui *idx_embedding,
                                   ui *temp_buffer, ui **valid_candidate_idx, bool *visited_vertices, ui **bn,
                                   ui *bn_count) {
@@ -262,12 +344,12 @@ EvaluateQuery::LFTJ(const Graph *data_graph, const Graph *query_graph, Edges ***
     memset(begin_count, 0, query_graph->getVerticesCount() * sizeof(size_t));
 #endif
 
-    // Generate bn.
+    
     ui **bn;
     ui *bn_count;
     generateBN(query_graph, order, bn, bn_count);
 
-    // Allocate the memory buffer.
+    
     ui *idx;
     ui *idx_count;
     ui *embedding;
@@ -325,7 +407,7 @@ EvaluateQuery::LFTJ(const Graph *data_graph, const Graph *query_graph, Edges ***
 
 #ifdef DISTRIBUTION
             begin_count[cur_depth] = embedding_cnt;
-            // printf("Cur Depth: %d, v: %u, begin: %zu\n", cur_depth, v, embedding_cnt);
+            
 #endif
 
 #ifdef ENABLE_FAILING_SET
@@ -392,12 +474,12 @@ EvaluateQuery::LFTJ(const Graph *data_graph, const Graph *query_graph, Edges ***
 
 #ifdef DISTRIBUTION
             distribution_count_[embedding[u]] += embedding_cnt - begin_count[cur_depth];
-            // printf("Cur Depth: %d, v: %u, begin: %zu, end: %zu\n", cur_depth, embedding[u], begin_count[cur_depth], embedding_cnt);
+            
 #endif
         }
     }
 
-    // Release the buffer.
+    
 
 #ifdef DISTRIBUTION
     if (embedding_cnt >= output_limit_num) {
@@ -422,7 +504,7 @@ EvaluateQuery::LFTJ(const Graph *data_graph, const Graph *query_graph, Edges ***
 
     for (ui i = 0; i < max_depth; ++i) {
         for (ui j = 0; j < max_depth; ++j) {
-//            delete qfliter_bsr_graph_[i][j];
+
         }
         delete[] qfliter_bsr_graph_[i];
     }
@@ -432,6 +514,21 @@ EvaluateQuery::LFTJ(const Graph *data_graph, const Graph *query_graph, Edges ***
     return embedding_cnt;
 }
 
+/**
+ * Generates valid candidate indices for a given depth in the query evaluation process.
+ *
+ * @param depth The depth of the current vertex in the query evaluation process.
+ * @param idx_embedding The embedding of the indices.
+ * @param idx_count The count of indices.
+ * @param valid_candidate_index The array to store the valid candidate indices.
+ * @param edge_matrix The matrix of edges.
+ * @param bn The array of base nodes.
+ * @param bn_cnt The count of base nodes.
+ * @param order The order of vertices.
+ * @param temp_buffer The temporary buffer for computations.
+ *
+ * @returns None
+ */
 void EvaluateQuery::generateValidCandidateIndex(ui depth, ui *idx_embedding, ui *idx_count, ui **valid_candidate_index,
                                                 Edges ***edge_matrix, ui **bn, ui *bn_cnt, ui *order,
                                                 ui *&temp_buffer) {
@@ -447,7 +544,7 @@ void EvaluateQuery::generateValidCandidateIndex(ui depth, ui *idx_embedding, ui 
     if (bsr_set.size_ != 0){
         offline_bsr_trans_uint(bsr_set.base_, bsr_set.states_, bsr_set.size_,
                                (int *) valid_candidate_index[depth]);
-        // represent bsr size
+        
         valid_candidates_count = bsr_set.size_;
     }
 
@@ -492,7 +589,7 @@ void EvaluateQuery::generateValidCandidateIndex(ui depth, ui *idx_embedding, ui 
 
     idx_count[depth] = valid_candidates_count;
 
-    // Debugging.
+    
 #ifdef YCHE_DEBUG
     Edges &previous_edge = *edge_matrix[previous_bn][u];
 
@@ -566,7 +663,7 @@ size_t EvaluateQuery::exploreGraphQLStyle(const Graph *data_graph, const Graph *
     int max_depth = query_graph->getVerticesCount();
     VertexID start_vertex = order[0];
 
-    // Generate the bn.
+    
     ui **bn;
     ui *bn_count;
 
@@ -596,7 +693,7 @@ size_t EvaluateQuery::exploreGraphQLStyle(const Graph *data_graph, const Graph *
         visited_query_vertices[cur_vertex] = true;
     }
 
-    // Allocate the memory buffer.
+    
     ui *idx;
     ui *idx_count;
     ui *embedding;
@@ -651,7 +748,7 @@ size_t EvaluateQuery::exploreGraphQLStyle(const Graph *data_graph, const Graph *
             visited_vertices[embedding[order[cur_depth]]] = false;
     }
 
-    // Release the buffer.
+    
     EXIT:
     delete[] bn_count;
     delete[] idx;
@@ -707,12 +804,12 @@ size_t EvaluateQuery::exploreQuickSIStyle(const Graph *data_graph, const Graph *
     int max_depth = query_graph->getVerticesCount();
     VertexID start_vertex = order[0];
 
-    // Generate the bn.
+    
     ui **bn;
     ui *bn_count;
     generateBN(query_graph, order, pivot, bn, bn_count);
 
-    // Allocate the memory buffer.
+    
     ui *idx;
     ui *idx_count;
     ui *embedding;
@@ -766,7 +863,7 @@ size_t EvaluateQuery::exploreQuickSIStyle(const Graph *data_graph, const Graph *
             visited_vertices[embedding[order[cur_depth]]] = false;
     }
 
-    // Release the buffer.
+    
     EXIT:
     delete[] bn_count;
     delete[] idx;
@@ -833,12 +930,12 @@ size_t EvaluateQuery::exploreDPisoStyle(const Graph *data_graph, const Graph *qu
         extendable[i] = tree[i].bn_count_;
     }
 
-    // Generate backward neighbors.
+    
     ui **bn;
     ui *bn_count;
     generateBN(query_graph, order, bn, bn_count);
 
-    // Allocate the memory buffer.
+    
     ui *idx;
     ui *idx_count;
     ui *embedding;
@@ -849,7 +946,7 @@ size_t EvaluateQuery::exploreDPisoStyle(const Graph *data_graph, const Graph *qu
     allocateBuffer(data_graph, query_graph, candidates_count, idx, idx_count, embedding, idx_embedding,
                    temp_buffer, valid_candidate_idx, visited_vertices);
 
-    // Evaluate the query.
+    
     size_t embedding_cnt = 0;
     int cur_depth = 0;
 
@@ -970,7 +1067,7 @@ size_t EvaluateQuery::exploreDPisoStyle(const Graph *data_graph, const Graph *qu
         }
     }
 
-    // Release the buffer.
+    
     EXIT:
     releaseBuffer(max_depth, idx, idx_count, embedding, idx_embedding, temp_buffer, valid_candidate_idx,
                   visited_vertices,
@@ -1051,7 +1148,7 @@ void EvaluateQuery::computeAncestor(const Graph *query_graph, TreeNode *tree, Ve
     ui query_vertices_num = query_graph->getVerticesCount();
     ancestors.resize(query_vertices_num);
 
-    // Compute the ancestor in the top-down order.
+    
     for (ui i = 0; i < query_vertices_num; ++i) {
         VertexID u = order[i];
         TreeNode &u_node = tree[u];
@@ -1074,12 +1171,12 @@ size_t EvaluateQuery::exploreDPisoRecursiveStyle(const Graph *data_graph, const 
         extendable[i] = tree[i].bn_count_;
     }
 
-    // Generate backward neighbors.
+    
     ui **bn;
     ui *bn_count;
     generateBN(query_graph, order, bn, bn_count);
 
-    // Allocate the memory buffer.
+    
     ui *idx;
     ui *idx_count;
     ui *embedding;
@@ -1090,7 +1187,7 @@ size_t EvaluateQuery::exploreDPisoRecursiveStyle(const Graph *data_graph, const 
     allocateBuffer(data_graph, query_graph, candidates_count, idx, idx_count, embedding, idx_embedding,
                    temp_buffer, valid_candidate_idx, visited_vertices);
 
-    // Evaluate the query.
+    
     size_t embedding_cnt = 0;
 
     std::vector<std::bitset<MAXIMUM_QUERY_GRAPH_SIZE>> ancestors;
@@ -1118,7 +1215,7 @@ size_t EvaluateQuery::exploreDPisoRecursiveStyle(const Graph *data_graph, const 
         reverse_embedding.erase(v);
     }
 
-    // Release the buffer.
+    
     releaseBuffer(max_depth, idx, idx_count, embedding, idx_embedding, temp_buffer, valid_candidate_idx,
                   visited_vertices,
                   bn, bn_count);
@@ -1135,7 +1232,7 @@ EvaluateQuery::exploreDPisoBacktrack(ui max_depth, ui depth, VertexID mapped_ver
                                      dpiso_min_pq rank_queue, ui **weight_array, ui *&temp_buffer, ui *extendable,
                                      ui **candidates, size_t &embedding_count, size_t &call_count,
                                      const Graph *query_graph) {
-    // Compute extendable vertex.
+    
     TreeNode &node = tree[mapped_vertex];
     for (ui i = 0; i < node.fn_count_; ++i) {
         VertexID u = node.fn_[i];
@@ -1220,7 +1317,7 @@ EvaluateQuery::exploreCECIStyle(const Graph *data_graph, const Graph *query_grap
             max_valid_candidates_count = candidates_count[i];
         }
     }
-    // Allocate the memory buffer.
+    
     ui *idx = new ui[max_depth];
     ui *idx_count = new ui[max_depth];
     ui *embedding = new ui[max_depth];
@@ -1232,7 +1329,7 @@ EvaluateQuery::exploreCECIStyle(const Graph *data_graph, const Graph *query_grap
     bool *visited_vertices = new bool[data_vertices_count];
     std::fill(visited_vertices, visited_vertices + data_vertices_count, false);
 
-    // Evaluate the query.
+    
     size_t embedding_cnt = 0;
     int cur_depth = 0;
     VertexID start_vertex = order[0];
@@ -1321,7 +1418,7 @@ EvaluateQuery::exploreCECIStyle(const Graph *data_graph, const Graph *query_grap
         }
     }
 
-    // Release the buffer.
+    
     EXIT:
     delete[] idx;
     delete[] idx_count;
@@ -1390,7 +1487,7 @@ void EvaluateQuery::computeAncestor(const Graph *query_graph, ui **bn, ui *bn_cn
     ui query_vertices_num = query_graph->getVerticesCount();
     ancestors.resize(query_vertices_num);
 
-    // Compute the ancestor in the top-down order.
+    
     for (ui i = 0; i < query_vertices_num; ++i) {
         VertexID u = order[i];
         ancestors[u].set(u);
@@ -1406,7 +1503,7 @@ void EvaluateQuery::computeAncestor(const Graph *query_graph, VertexID *order,
     ui query_vertices_num = query_graph->getVerticesCount();
     ancestors.resize(query_vertices_num);
 
-    // Compute the ancestor in the top-down order.
+    
     for (ui i = 0; i < query_vertices_num; ++i) {
         VertexID u = order[i];
         ancestors[u].set(u);

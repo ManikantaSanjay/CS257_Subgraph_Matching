@@ -1,6 +1,6 @@
-//
-// Get from Dr. Lemire.
-//
+
+
+
 
 #ifndef SUBGRAPHMATCHING_BITSETOPERATION_H
 #define SUBGRAPHMATCHING_BITSETOPERATION_H
@@ -15,7 +15,7 @@ public:
     static void intersectBitsetWithBitset(const uint64_t* a, const uint64_t* b, uint64_t* output, uint32_t count);
     static uint32_t intersectArrayWithBitset(const uint32_t *a, uint32_t a_count, const uint64_t *b,
                                             uint32_t *output);
-    static uint32_t intersectArrayWithArray(const uint32_t *a, uint32_t a_count, const uint32_t *b, uint32_t b_count,
+    static uint32_t iPntersectArrayWithArray(const uint32_t *a, uint32_t a_count, const uint32_t *b, uint32_t b_count,
                                             uint32_t *output);
     static uint32_t mergeIntersection(const uint32_t *a, uint32_t a_count, const uint32_t *b, uint32_t b_count, uint32_t *output);
     static uint32_t skewIntersection(const uint32_t *small, uint32_t small_count, const uint32_t *large, uint32_t large_count, uint32_t *output);
@@ -23,4 +23,4 @@ public:
 };
 
 
-#endif //SUBGRAPHMATCHING_BITSETOPERATION_H
+#endif 

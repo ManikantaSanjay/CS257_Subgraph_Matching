@@ -1,6 +1,6 @@
-//
-// Created by Shixuan Sun on 2018/6/29.
-//
+
+
+
 
 #ifndef SUBGRAPHMATCHING_MATCHINGCOMMAND_H
 #define SUBGRAPHMATCHING_MATCHINGCOMMAND_H
@@ -9,21 +9,21 @@
 #include <map>
 #include <iostream>
 enum OptionKeyword {
-    Algorithm = 0,          // -a, The algorithm name, compulsive parameter
-    QueryGraphFile = 1,     // -q, The query graph file path, compulsive parameter
-    DataGraphFile = 2,      // -d, The data graph file path, compulsive parameter
-    ThreadCount = 3,        // -n, The number of thread, optional parameter
-    DepthThreshold = 4,     // -d0,The threshold to control the depth for splitting task, optional parameter
-    WidthThreshold = 5,     // -w0,The threshold to control the width for splitting task, optional parameter
-    IndexType = 6,          // -i, The type of index, vertex centric or edge centric
-    Filter = 7,             // -filter, The strategy of filtering
-    Order = 8,              // -order, The strategy of ordering
-    Engine = 9,             // -engine, The computation engine
-    MaxOutputEmbeddingNum = 10, // -num, The maximum output embedding num
-    SpectrumAnalysisTimeLimit = 11, // -time_limit, The time limit for executing a query in seconds
-    SpectrumAnalysisOrderNum = 12, // -order_num, The number of matching orders generated
-    DistributionFilePath = 13,          // -dis_file, The output path of the distribution array
-    CSRFilePath = 14                    // -csr, The input csr file path
+    Algorithm = 0,          
+    QueryGraphFile = 1,     
+    DataGraphFile = 2,      
+    ThreadCount = 3,        
+    DepthThreshold = 4,     
+    WidthThreshold = 5,     
+    IndexType = 6,          
+    Filter = 7,             
+    Order = 8,              
+    Engine = 9,             
+    MaxOutputEmbeddingNum = 10, 
+    SpectrumAnalysisTimeLimit = 11, 
+    SpectrumAnalysisOrderNum = 12, 
+    DistributionFilePath = 13,          
+    CSRFilePath = 14                    
 };
 
 class MatchingCommand : public CommandParser{
@@ -98,4 +98,4 @@ public:
 };
 
 
-#endif //SUBGRAPHMATCHING_MATCHINGCOMMAND_H
+#endif 

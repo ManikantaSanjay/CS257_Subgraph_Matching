@@ -1,6 +1,6 @@
-//
-// Created by ssunah on 11/20/18.
-//
+
+
+
 
 #ifndef SUBGRAPHMATCHING_GENERATEQUERYPLAN_H
 #define SUBGRAPHMATCHING_GENERATEQUERYPLAN_H
@@ -62,4 +62,4 @@ private:
 };
 
 
-#endif //SUBGRAPHMATCHING_GENERATEQUERYPLAN_H
+#endif 
