@@ -1,7 +1,4 @@
 
-
-
-
 #include "EvaluateQuery.h"
 #include "utility/computesetintersection.h"
 #include <vector>
