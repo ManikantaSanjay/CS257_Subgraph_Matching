@@ -54,10 +54,10 @@ RM = /usr/local/Cellar/cmake/3.27.7/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/admin/Desktop/GitHub/SubgraphMatching
+CMAKE_SOURCE_DIR = /Users/admin/Desktop/GitHub/subgraphmatching_db_systems
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/admin/Desktop/GitHub/SubgraphMatching/build
+CMAKE_BINARY_DIR = /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -140,14 +140,14 @@ utility/clean: utility/CMakeFiles/utility.dir/clean
 graph/CMakeFiles/graph.dir/all:
 	$(MAKE) $(MAKESILENT) -f graph/CMakeFiles/graph.dir/build.make graph/CMakeFiles/graph.dir/depend
 	$(MAKE) $(MAKESILENT) -f graph/CMakeFiles/graph.dir/build.make graph/CMakeFiles/graph.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles --progress-num=17,18 "Built target graph"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles --progress-num=17,18 "Built target graph"
 .PHONY : graph/CMakeFiles/graph.dir/all
 
 # Build rule for subdir invocation for target.
 graph/CMakeFiles/graph.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 graph/CMakeFiles/graph.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles 0
 .PHONY : graph/CMakeFiles/graph.dir/rule
 
 # Convenience name for target.
@@ -167,14 +167,14 @@ matching/CMakeFiles/SubgraphMatching.out.dir/all: graph/CMakeFiles/graph.dir/all
 matching/CMakeFiles/SubgraphMatching.out.dir/all: utility/CMakeFiles/utility.dir/all
 	$(MAKE) $(MAKESILENT) -f matching/CMakeFiles/SubgraphMatching.out.dir/build.make matching/CMakeFiles/SubgraphMatching.out.dir/depend
 	$(MAKE) $(MAKESILENT) -f matching/CMakeFiles/SubgraphMatching.out.dir/build.make matching/CMakeFiles/SubgraphMatching.out.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles --progress-num=9,10,11,12,13,14,15,16 "Built target SubgraphMatching.out"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles --progress-num=9,10,11,12,13,14,15,16 "Built target SubgraphMatching.out"
 .PHONY : matching/CMakeFiles/SubgraphMatching.out.dir/all
 
 # Build rule for subdir invocation for target.
 matching/CMakeFiles/SubgraphMatching.out.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles 17
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 matching/CMakeFiles/SubgraphMatching.out.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles 0
 .PHONY : matching/CMakeFiles/SubgraphMatching.out.dir/rule
 
 # Convenience name for target.
@@ -194,14 +194,14 @@ matching/CMakeFiles/GraphConverter.out.dir/all: graph/CMakeFiles/graph.dir/all
 matching/CMakeFiles/GraphConverter.out.dir/all: utility/CMakeFiles/utility.dir/all
 	$(MAKE) $(MAKESILENT) -f matching/CMakeFiles/GraphConverter.out.dir/build.make matching/CMakeFiles/GraphConverter.out.dir/depend
 	$(MAKE) $(MAKESILENT) -f matching/CMakeFiles/GraphConverter.out.dir/build.make matching/CMakeFiles/GraphConverter.out.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles --progress-num=3,4 "Built target GraphConverter.out"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles --progress-num=3,4 "Built target GraphConverter.out"
 .PHONY : matching/CMakeFiles/GraphConverter.out.dir/all
 
 # Build rule for subdir invocation for target.
 matching/CMakeFiles/GraphConverter.out.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 matching/CMakeFiles/GraphConverter.out.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles 0
 .PHONY : matching/CMakeFiles/GraphConverter.out.dir/rule
 
 # Convenience name for target.
@@ -220,14 +220,14 @@ matching/CMakeFiles/GraphConverter.out.dir/clean:
 matching/CMakeFiles/EdgeListConverter.out.dir/all:
 	$(MAKE) $(MAKESILENT) -f matching/CMakeFiles/EdgeListConverter.out.dir/build.make matching/CMakeFiles/EdgeListConverter.out.dir/depend
 	$(MAKE) $(MAKESILENT) -f matching/CMakeFiles/EdgeListConverter.out.dir/build.make matching/CMakeFiles/EdgeListConverter.out.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles --progress-num=1,2 "Built target EdgeListConverter.out"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles --progress-num=1,2 "Built target EdgeListConverter.out"
 .PHONY : matching/CMakeFiles/EdgeListConverter.out.dir/all
 
 # Build rule for subdir invocation for target.
 matching/CMakeFiles/EdgeListConverter.out.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 matching/CMakeFiles/EdgeListConverter.out.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles 0
 .PHONY : matching/CMakeFiles/EdgeListConverter.out.dir/rule
 
 # Convenience name for target.
@@ -246,14 +246,14 @@ matching/CMakeFiles/EdgeListConverter.out.dir/clean:
 matching/CMakeFiles/ReassignLabel.dir/all:
 	$(MAKE) $(MAKESILENT) -f matching/CMakeFiles/ReassignLabel.dir/build.make matching/CMakeFiles/ReassignLabel.dir/depend
 	$(MAKE) $(MAKESILENT) -f matching/CMakeFiles/ReassignLabel.dir/build.make matching/CMakeFiles/ReassignLabel.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles --progress-num=5,6 "Built target ReassignLabel"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles --progress-num=5,6 "Built target ReassignLabel"
 .PHONY : matching/CMakeFiles/ReassignLabel.dir/all
 
 # Build rule for subdir invocation for target.
 matching/CMakeFiles/ReassignLabel.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 matching/CMakeFiles/ReassignLabel.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles 0
 .PHONY : matching/CMakeFiles/ReassignLabel.dir/rule
 
 # Convenience name for target.
@@ -272,14 +272,14 @@ matching/CMakeFiles/ReassignLabel.dir/clean:
 matching/CMakeFiles/SelectEdge.dir/all:
 	$(MAKE) $(MAKESILENT) -f matching/CMakeFiles/SelectEdge.dir/build.make matching/CMakeFiles/SelectEdge.dir/depend
 	$(MAKE) $(MAKESILENT) -f matching/CMakeFiles/SelectEdge.dir/build.make matching/CMakeFiles/SelectEdge.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles --progress-num=7,8 "Built target SelectEdge"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles --progress-num=7,8 "Built target SelectEdge"
 .PHONY : matching/CMakeFiles/SelectEdge.dir/all
 
 # Build rule for subdir invocation for target.
 matching/CMakeFiles/SelectEdge.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 matching/CMakeFiles/SelectEdge.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles 0
 .PHONY : matching/CMakeFiles/SelectEdge.dir/rule
 
 # Convenience name for target.
@@ -298,14 +298,14 @@ matching/CMakeFiles/SelectEdge.dir/clean:
 utility/CMakeFiles/utility.dir/all:
 	$(MAKE) $(MAKESILENT) -f utility/CMakeFiles/utility.dir/build.make utility/CMakeFiles/utility.dir/depend
 	$(MAKE) $(MAKESILENT) -f utility/CMakeFiles/utility.dir/build.make utility/CMakeFiles/utility.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles --progress-num=19,20,21,22,23,24,25 "Built target utility"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles --progress-num=19,20,21,22,23,24,25 "Built target utility"
 .PHONY : utility/CMakeFiles/utility.dir/all
 
 # Build rule for subdir invocation for target.
 utility/CMakeFiles/utility.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utility/CMakeFiles/utility.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles 0
 .PHONY : utility/CMakeFiles/utility.dir/rule
 
 # Convenience name for target.

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/admin/Desktop/GitHub/SubgraphMatching
+# Install script for directory: /Users/admin/Desktop/GitHub/subgraphmatching_db_systems
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,9 +39,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/admin/Desktop/GitHub/SubgraphMatching/build/graph/cmake_install.cmake")
-  include("/Users/admin/Desktop/GitHub/SubgraphMatching/build/matching/cmake_install.cmake")
-  include("/Users/admin/Desktop/GitHub/SubgraphMatching/build/utility/cmake_install.cmake")
+  include("/Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/graph/cmake_install.cmake")
+  include("/Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching/cmake_install.cmake")
+  include("/Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/utility/cmake_install.cmake")
 
 endif()
 
@@ -53,5 +53,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/admin/Desktop/GitHub/SubgraphMatching/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

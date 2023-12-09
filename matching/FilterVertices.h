@@ -1,7 +1,3 @@
-//
-// Created by ssunah on 11/20/18.
-//
-
 #ifndef SUBGRAPHMATCHING_FILTERVERTICES_H
 #define SUBGRAPHMATCHING_FILTERVERTICES_H
 

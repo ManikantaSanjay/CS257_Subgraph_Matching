@@ -1,7 +1,7 @@
 utility/CMakeFiles/utility.dir/han/intersection_algos.cpp.o: \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/utility/han/intersection_algos.cpp \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/utility/han/intersection_algos.hpp \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/utility/han/utils/util.hpp \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/utility/han/intersection_algos.cpp \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/utility/han/intersection_algos.hpp \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/utility/han/utils/util.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cstdio \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config_site \

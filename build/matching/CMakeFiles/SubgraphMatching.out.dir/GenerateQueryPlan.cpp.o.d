@@ -1,7 +1,7 @@
 matching/CMakeFiles/SubgraphMatching.out.dir/GenerateQueryPlan.cpp.o: \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/matching/GenerateQueryPlan.cpp \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/matching/GenerateQueryPlan.h \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/graph/graph.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/GenerateQueryPlan.cpp \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/GenerateQueryPlan.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/graph/graph.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/unordered_map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config_site \
@@ -424,11 +424,11 @@ matching/CMakeFiles/SubgraphMatching.out.dir/GenerateQueryPlan.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_fsfilcnt_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/_types/_nl_item.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/configuration/types.h \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/configuration/config.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/configuration/types.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/configuration/config.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/vector \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__split_buffer \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/utility/computesetintersection.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/utility/computesetintersection.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/immintrin.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/x86gprintrin.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/hresetintrin.h \
@@ -520,4 +520,4 @@ matching/CMakeFiles/SubgraphMatching.out.dir/GenerateQueryPlan.cpp.o: \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/lwpintrin.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/mwaitxintrin.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/clzerointrin.h \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/utility/graphoperations.h
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/utility/graphoperations.h

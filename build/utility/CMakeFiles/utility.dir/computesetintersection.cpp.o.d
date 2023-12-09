@@ -1,7 +1,7 @@
 utility/CMakeFiles/utility.dir/computesetintersection.cpp.o: \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/utility/computesetintersection.cpp \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/utility/computesetintersection.h \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/configuration/types.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/utility/computesetintersection.cpp \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/utility/computesetintersection.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/configuration/types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cstdint \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config_site \
@@ -72,7 +72,7 @@ utility/CMakeFiles/utility.dir/computesetintersection.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/malloc/_malloc.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_dev_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_mode_t.h \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/configuration/config.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/configuration/config.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/immintrin.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/x86gprintrin.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/hresetintrin.h \

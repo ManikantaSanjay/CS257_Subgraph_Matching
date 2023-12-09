@@ -1,4 +1,4 @@
-# Install script for directory: /Users/admin/Desktop/GitHub/SubgraphMatching/graph
+# Install script for directory: /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/graph
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,5 +1,5 @@
 matching/CMakeFiles/EdgeListConverter.out.dir/EdgeListToCSR.cpp.o: \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/matching/EdgeListToCSR.cpp \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/EdgeListToCSR.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cassert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config_site \

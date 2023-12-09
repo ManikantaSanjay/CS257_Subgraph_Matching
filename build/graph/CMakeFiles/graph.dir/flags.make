@@ -4,7 +4,7 @@
 # compile CXX with /Library/Developer/CommandLineTools/usr/bin/c++
 CXX_DEFINES = -Dgraph_EXPORTS
 
-CXX_INCLUDES = -I/Users/admin/Desktop/GitHub/SubgraphMatching
+CXX_INCLUDES = -I/Users/admin/Desktop/GitHub/subgraphmatching_db_systems
 
 CXX_FLAGS =  -std=c++11 -O3 -g -Wall -march=native -pthread -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6 -fPIC
 

@@ -1,6 +1,6 @@
 utility/CMakeFiles/utility.dir/commandparser.cpp.o: \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/utility/commandparser.cpp \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/utility/commandparser.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/utility/commandparser.cpp \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/utility/commandparser.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config_site \

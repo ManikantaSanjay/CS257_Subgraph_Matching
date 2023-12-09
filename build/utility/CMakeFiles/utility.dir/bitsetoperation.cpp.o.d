@@ -1,6 +1,6 @@
 utility/CMakeFiles/utility.dir/bitsetoperation.cpp.o: \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/utility/bitsetoperation.cpp \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/utility/bitsetoperation.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/utility/bitsetoperation.cpp \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/utility/bitsetoperation.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cstdint \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config_site \

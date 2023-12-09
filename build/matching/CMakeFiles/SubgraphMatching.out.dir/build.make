@@ -53,10 +53,10 @@ RM = /usr/local/Cellar/cmake/3.27.7/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/admin/Desktop/GitHub/SubgraphMatching
+CMAKE_SOURCE_DIR = /Users/admin/Desktop/GitHub/subgraphmatching_db_systems
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/admin/Desktop/GitHub/SubgraphMatching/build
+CMAKE_BINARY_DIR = /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build
 
 # Include any dependencies generated for this target.
 include matching/CMakeFiles/SubgraphMatching.out.dir/depend.make
@@ -70,102 +70,102 @@ include matching/CMakeFiles/SubgraphMatching.out.dir/progress.make
 include matching/CMakeFiles/SubgraphMatching.out.dir/flags.make
 
 matching/CMakeFiles/SubgraphMatching.out.dir/matchingcommand.cpp.o: matching/CMakeFiles/SubgraphMatching.out.dir/flags.make
-matching/CMakeFiles/SubgraphMatching.out.dir/matchingcommand.cpp.o: /Users/admin/Desktop/GitHub/SubgraphMatching/matching/matchingcommand.cpp
+matching/CMakeFiles/SubgraphMatching.out.dir/matchingcommand.cpp.o: /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/matchingcommand.cpp
 matching/CMakeFiles/SubgraphMatching.out.dir/matchingcommand.cpp.o: matching/CMakeFiles/SubgraphMatching.out.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object matching/CMakeFiles/SubgraphMatching.out.dir/matchingcommand.cpp.o"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT matching/CMakeFiles/SubgraphMatching.out.dir/matchingcommand.cpp.o -MF CMakeFiles/SubgraphMatching.out.dir/matchingcommand.cpp.o.d -o CMakeFiles/SubgraphMatching.out.dir/matchingcommand.cpp.o -c /Users/admin/Desktop/GitHub/SubgraphMatching/matching/matchingcommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object matching/CMakeFiles/SubgraphMatching.out.dir/matchingcommand.cpp.o"
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT matching/CMakeFiles/SubgraphMatching.out.dir/matchingcommand.cpp.o -MF CMakeFiles/SubgraphMatching.out.dir/matchingcommand.cpp.o.d -o CMakeFiles/SubgraphMatching.out.dir/matchingcommand.cpp.o -c /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/matchingcommand.cpp
 
 matching/CMakeFiles/SubgraphMatching.out.dir/matchingcommand.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SubgraphMatching.out.dir/matchingcommand.cpp.i"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Desktop/GitHub/SubgraphMatching/matching/matchingcommand.cpp > CMakeFiles/SubgraphMatching.out.dir/matchingcommand.cpp.i
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/matchingcommand.cpp > CMakeFiles/SubgraphMatching.out.dir/matchingcommand.cpp.i
 
 matching/CMakeFiles/SubgraphMatching.out.dir/matchingcommand.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SubgraphMatching.out.dir/matchingcommand.cpp.s"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Desktop/GitHub/SubgraphMatching/matching/matchingcommand.cpp -o CMakeFiles/SubgraphMatching.out.dir/matchingcommand.cpp.s
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/matchingcommand.cpp -o CMakeFiles/SubgraphMatching.out.dir/matchingcommand.cpp.s
 
 matching/CMakeFiles/SubgraphMatching.out.dir/FilterVertices.cpp.o: matching/CMakeFiles/SubgraphMatching.out.dir/flags.make
-matching/CMakeFiles/SubgraphMatching.out.dir/FilterVertices.cpp.o: /Users/admin/Desktop/GitHub/SubgraphMatching/matching/FilterVertices.cpp
+matching/CMakeFiles/SubgraphMatching.out.dir/FilterVertices.cpp.o: /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/FilterVertices.cpp
 matching/CMakeFiles/SubgraphMatching.out.dir/FilterVertices.cpp.o: matching/CMakeFiles/SubgraphMatching.out.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object matching/CMakeFiles/SubgraphMatching.out.dir/FilterVertices.cpp.o"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT matching/CMakeFiles/SubgraphMatching.out.dir/FilterVertices.cpp.o -MF CMakeFiles/SubgraphMatching.out.dir/FilterVertices.cpp.o.d -o CMakeFiles/SubgraphMatching.out.dir/FilterVertices.cpp.o -c /Users/admin/Desktop/GitHub/SubgraphMatching/matching/FilterVertices.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object matching/CMakeFiles/SubgraphMatching.out.dir/FilterVertices.cpp.o"
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT matching/CMakeFiles/SubgraphMatching.out.dir/FilterVertices.cpp.o -MF CMakeFiles/SubgraphMatching.out.dir/FilterVertices.cpp.o.d -o CMakeFiles/SubgraphMatching.out.dir/FilterVertices.cpp.o -c /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/FilterVertices.cpp
 
 matching/CMakeFiles/SubgraphMatching.out.dir/FilterVertices.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SubgraphMatching.out.dir/FilterVertices.cpp.i"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Desktop/GitHub/SubgraphMatching/matching/FilterVertices.cpp > CMakeFiles/SubgraphMatching.out.dir/FilterVertices.cpp.i
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/FilterVertices.cpp > CMakeFiles/SubgraphMatching.out.dir/FilterVertices.cpp.i
 
 matching/CMakeFiles/SubgraphMatching.out.dir/FilterVertices.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SubgraphMatching.out.dir/FilterVertices.cpp.s"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Desktop/GitHub/SubgraphMatching/matching/FilterVertices.cpp -o CMakeFiles/SubgraphMatching.out.dir/FilterVertices.cpp.s
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/FilterVertices.cpp -o CMakeFiles/SubgraphMatching.out.dir/FilterVertices.cpp.s
 
 matching/CMakeFiles/SubgraphMatching.out.dir/BuildTable.cpp.o: matching/CMakeFiles/SubgraphMatching.out.dir/flags.make
-matching/CMakeFiles/SubgraphMatching.out.dir/BuildTable.cpp.o: /Users/admin/Desktop/GitHub/SubgraphMatching/matching/BuildTable.cpp
+matching/CMakeFiles/SubgraphMatching.out.dir/BuildTable.cpp.o: /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/BuildTable.cpp
 matching/CMakeFiles/SubgraphMatching.out.dir/BuildTable.cpp.o: matching/CMakeFiles/SubgraphMatching.out.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object matching/CMakeFiles/SubgraphMatching.out.dir/BuildTable.cpp.o"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT matching/CMakeFiles/SubgraphMatching.out.dir/BuildTable.cpp.o -MF CMakeFiles/SubgraphMatching.out.dir/BuildTable.cpp.o.d -o CMakeFiles/SubgraphMatching.out.dir/BuildTable.cpp.o -c /Users/admin/Desktop/GitHub/SubgraphMatching/matching/BuildTable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object matching/CMakeFiles/SubgraphMatching.out.dir/BuildTable.cpp.o"
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT matching/CMakeFiles/SubgraphMatching.out.dir/BuildTable.cpp.o -MF CMakeFiles/SubgraphMatching.out.dir/BuildTable.cpp.o.d -o CMakeFiles/SubgraphMatching.out.dir/BuildTable.cpp.o -c /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/BuildTable.cpp
 
 matching/CMakeFiles/SubgraphMatching.out.dir/BuildTable.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SubgraphMatching.out.dir/BuildTable.cpp.i"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Desktop/GitHub/SubgraphMatching/matching/BuildTable.cpp > CMakeFiles/SubgraphMatching.out.dir/BuildTable.cpp.i
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/BuildTable.cpp > CMakeFiles/SubgraphMatching.out.dir/BuildTable.cpp.i
 
 matching/CMakeFiles/SubgraphMatching.out.dir/BuildTable.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SubgraphMatching.out.dir/BuildTable.cpp.s"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Desktop/GitHub/SubgraphMatching/matching/BuildTable.cpp -o CMakeFiles/SubgraphMatching.out.dir/BuildTable.cpp.s
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/BuildTable.cpp -o CMakeFiles/SubgraphMatching.out.dir/BuildTable.cpp.s
 
 matching/CMakeFiles/SubgraphMatching.out.dir/GenerateQueryPlan.cpp.o: matching/CMakeFiles/SubgraphMatching.out.dir/flags.make
-matching/CMakeFiles/SubgraphMatching.out.dir/GenerateQueryPlan.cpp.o: /Users/admin/Desktop/GitHub/SubgraphMatching/matching/GenerateQueryPlan.cpp
+matching/CMakeFiles/SubgraphMatching.out.dir/GenerateQueryPlan.cpp.o: /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/GenerateQueryPlan.cpp
 matching/CMakeFiles/SubgraphMatching.out.dir/GenerateQueryPlan.cpp.o: matching/CMakeFiles/SubgraphMatching.out.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object matching/CMakeFiles/SubgraphMatching.out.dir/GenerateQueryPlan.cpp.o"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT matching/CMakeFiles/SubgraphMatching.out.dir/GenerateQueryPlan.cpp.o -MF CMakeFiles/SubgraphMatching.out.dir/GenerateQueryPlan.cpp.o.d -o CMakeFiles/SubgraphMatching.out.dir/GenerateQueryPlan.cpp.o -c /Users/admin/Desktop/GitHub/SubgraphMatching/matching/GenerateQueryPlan.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object matching/CMakeFiles/SubgraphMatching.out.dir/GenerateQueryPlan.cpp.o"
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT matching/CMakeFiles/SubgraphMatching.out.dir/GenerateQueryPlan.cpp.o -MF CMakeFiles/SubgraphMatching.out.dir/GenerateQueryPlan.cpp.o.d -o CMakeFiles/SubgraphMatching.out.dir/GenerateQueryPlan.cpp.o -c /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/GenerateQueryPlan.cpp
 
 matching/CMakeFiles/SubgraphMatching.out.dir/GenerateQueryPlan.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SubgraphMatching.out.dir/GenerateQueryPlan.cpp.i"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Desktop/GitHub/SubgraphMatching/matching/GenerateQueryPlan.cpp > CMakeFiles/SubgraphMatching.out.dir/GenerateQueryPlan.cpp.i
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/GenerateQueryPlan.cpp > CMakeFiles/SubgraphMatching.out.dir/GenerateQueryPlan.cpp.i
 
 matching/CMakeFiles/SubgraphMatching.out.dir/GenerateQueryPlan.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SubgraphMatching.out.dir/GenerateQueryPlan.cpp.s"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Desktop/GitHub/SubgraphMatching/matching/GenerateQueryPlan.cpp -o CMakeFiles/SubgraphMatching.out.dir/GenerateQueryPlan.cpp.s
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/GenerateQueryPlan.cpp -o CMakeFiles/SubgraphMatching.out.dir/GenerateQueryPlan.cpp.s
 
 matching/CMakeFiles/SubgraphMatching.out.dir/EvaluateQuery.cpp.o: matching/CMakeFiles/SubgraphMatching.out.dir/flags.make
-matching/CMakeFiles/SubgraphMatching.out.dir/EvaluateQuery.cpp.o: /Users/admin/Desktop/GitHub/SubgraphMatching/matching/EvaluateQuery.cpp
+matching/CMakeFiles/SubgraphMatching.out.dir/EvaluateQuery.cpp.o: /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/EvaluateQuery.cpp
 matching/CMakeFiles/SubgraphMatching.out.dir/EvaluateQuery.cpp.o: matching/CMakeFiles/SubgraphMatching.out.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object matching/CMakeFiles/SubgraphMatching.out.dir/EvaluateQuery.cpp.o"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT matching/CMakeFiles/SubgraphMatching.out.dir/EvaluateQuery.cpp.o -MF CMakeFiles/SubgraphMatching.out.dir/EvaluateQuery.cpp.o.d -o CMakeFiles/SubgraphMatching.out.dir/EvaluateQuery.cpp.o -c /Users/admin/Desktop/GitHub/SubgraphMatching/matching/EvaluateQuery.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object matching/CMakeFiles/SubgraphMatching.out.dir/EvaluateQuery.cpp.o"
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT matching/CMakeFiles/SubgraphMatching.out.dir/EvaluateQuery.cpp.o -MF CMakeFiles/SubgraphMatching.out.dir/EvaluateQuery.cpp.o.d -o CMakeFiles/SubgraphMatching.out.dir/EvaluateQuery.cpp.o -c /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/EvaluateQuery.cpp
 
 matching/CMakeFiles/SubgraphMatching.out.dir/EvaluateQuery.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SubgraphMatching.out.dir/EvaluateQuery.cpp.i"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Desktop/GitHub/SubgraphMatching/matching/EvaluateQuery.cpp > CMakeFiles/SubgraphMatching.out.dir/EvaluateQuery.cpp.i
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/EvaluateQuery.cpp > CMakeFiles/SubgraphMatching.out.dir/EvaluateQuery.cpp.i
 
 matching/CMakeFiles/SubgraphMatching.out.dir/EvaluateQuery.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SubgraphMatching.out.dir/EvaluateQuery.cpp.s"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Desktop/GitHub/SubgraphMatching/matching/EvaluateQuery.cpp -o CMakeFiles/SubgraphMatching.out.dir/EvaluateQuery.cpp.s
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/EvaluateQuery.cpp -o CMakeFiles/SubgraphMatching.out.dir/EvaluateQuery.cpp.s
 
 matching/CMakeFiles/SubgraphMatching.out.dir/GenerateFilteringPlan.cpp.o: matching/CMakeFiles/SubgraphMatching.out.dir/flags.make
-matching/CMakeFiles/SubgraphMatching.out.dir/GenerateFilteringPlan.cpp.o: /Users/admin/Desktop/GitHub/SubgraphMatching/matching/GenerateFilteringPlan.cpp
+matching/CMakeFiles/SubgraphMatching.out.dir/GenerateFilteringPlan.cpp.o: /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/GenerateFilteringPlan.cpp
 matching/CMakeFiles/SubgraphMatching.out.dir/GenerateFilteringPlan.cpp.o: matching/CMakeFiles/SubgraphMatching.out.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object matching/CMakeFiles/SubgraphMatching.out.dir/GenerateFilteringPlan.cpp.o"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT matching/CMakeFiles/SubgraphMatching.out.dir/GenerateFilteringPlan.cpp.o -MF CMakeFiles/SubgraphMatching.out.dir/GenerateFilteringPlan.cpp.o.d -o CMakeFiles/SubgraphMatching.out.dir/GenerateFilteringPlan.cpp.o -c /Users/admin/Desktop/GitHub/SubgraphMatching/matching/GenerateFilteringPlan.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object matching/CMakeFiles/SubgraphMatching.out.dir/GenerateFilteringPlan.cpp.o"
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT matching/CMakeFiles/SubgraphMatching.out.dir/GenerateFilteringPlan.cpp.o -MF CMakeFiles/SubgraphMatching.out.dir/GenerateFilteringPlan.cpp.o.d -o CMakeFiles/SubgraphMatching.out.dir/GenerateFilteringPlan.cpp.o -c /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/GenerateFilteringPlan.cpp
 
 matching/CMakeFiles/SubgraphMatching.out.dir/GenerateFilteringPlan.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SubgraphMatching.out.dir/GenerateFilteringPlan.cpp.i"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Desktop/GitHub/SubgraphMatching/matching/GenerateFilteringPlan.cpp > CMakeFiles/SubgraphMatching.out.dir/GenerateFilteringPlan.cpp.i
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/GenerateFilteringPlan.cpp > CMakeFiles/SubgraphMatching.out.dir/GenerateFilteringPlan.cpp.i
 
 matching/CMakeFiles/SubgraphMatching.out.dir/GenerateFilteringPlan.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SubgraphMatching.out.dir/GenerateFilteringPlan.cpp.s"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Desktop/GitHub/SubgraphMatching/matching/GenerateFilteringPlan.cpp -o CMakeFiles/SubgraphMatching.out.dir/GenerateFilteringPlan.cpp.s
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/GenerateFilteringPlan.cpp -o CMakeFiles/SubgraphMatching.out.dir/GenerateFilteringPlan.cpp.s
 
 matching/CMakeFiles/SubgraphMatching.out.dir/StudyPerformance.cpp.o: matching/CMakeFiles/SubgraphMatching.out.dir/flags.make
-matching/CMakeFiles/SubgraphMatching.out.dir/StudyPerformance.cpp.o: /Users/admin/Desktop/GitHub/SubgraphMatching/matching/StudyPerformance.cpp
+matching/CMakeFiles/SubgraphMatching.out.dir/StudyPerformance.cpp.o: /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/StudyPerformance.cpp
 matching/CMakeFiles/SubgraphMatching.out.dir/StudyPerformance.cpp.o: matching/CMakeFiles/SubgraphMatching.out.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object matching/CMakeFiles/SubgraphMatching.out.dir/StudyPerformance.cpp.o"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT matching/CMakeFiles/SubgraphMatching.out.dir/StudyPerformance.cpp.o -MF CMakeFiles/SubgraphMatching.out.dir/StudyPerformance.cpp.o.d -o CMakeFiles/SubgraphMatching.out.dir/StudyPerformance.cpp.o -c /Users/admin/Desktop/GitHub/SubgraphMatching/matching/StudyPerformance.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object matching/CMakeFiles/SubgraphMatching.out.dir/StudyPerformance.cpp.o"
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT matching/CMakeFiles/SubgraphMatching.out.dir/StudyPerformance.cpp.o -MF CMakeFiles/SubgraphMatching.out.dir/StudyPerformance.cpp.o.d -o CMakeFiles/SubgraphMatching.out.dir/StudyPerformance.cpp.o -c /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/StudyPerformance.cpp
 
 matching/CMakeFiles/SubgraphMatching.out.dir/StudyPerformance.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SubgraphMatching.out.dir/StudyPerformance.cpp.i"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Desktop/GitHub/SubgraphMatching/matching/StudyPerformance.cpp > CMakeFiles/SubgraphMatching.out.dir/StudyPerformance.cpp.i
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/StudyPerformance.cpp > CMakeFiles/SubgraphMatching.out.dir/StudyPerformance.cpp.i
 
 matching/CMakeFiles/SubgraphMatching.out.dir/StudyPerformance.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SubgraphMatching.out.dir/StudyPerformance.cpp.s"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Desktop/GitHub/SubgraphMatching/matching/StudyPerformance.cpp -o CMakeFiles/SubgraphMatching.out.dir/StudyPerformance.cpp.s
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/StudyPerformance.cpp -o CMakeFiles/SubgraphMatching.out.dir/StudyPerformance.cpp.s
 
 # Object files for target SubgraphMatching.out
 SubgraphMatching_out_OBJECTS = \
@@ -191,18 +191,18 @@ matching/SubgraphMatching.out: matching/CMakeFiles/SubgraphMatching.out.dir/buil
 matching/SubgraphMatching.out: graph/libgraph.dylib
 matching/SubgraphMatching.out: utility/libutility.dylib
 matching/SubgraphMatching.out: matching/CMakeFiles/SubgraphMatching.out.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable SubgraphMatching.out"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SubgraphMatching.out.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable SubgraphMatching.out"
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SubgraphMatching.out.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 matching/CMakeFiles/SubgraphMatching.out.dir/build: matching/SubgraphMatching.out
 .PHONY : matching/CMakeFiles/SubgraphMatching.out.dir/build
 
 matching/CMakeFiles/SubgraphMatching.out.dir/clean:
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && $(CMAKE_COMMAND) -P CMakeFiles/SubgraphMatching.out.dir/cmake_clean.cmake
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && $(CMAKE_COMMAND) -P CMakeFiles/SubgraphMatching.out.dir/cmake_clean.cmake
 .PHONY : matching/CMakeFiles/SubgraphMatching.out.dir/clean
 
 matching/CMakeFiles/SubgraphMatching.out.dir/depend:
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/admin/Desktop/GitHub/SubgraphMatching /Users/admin/Desktop/GitHub/SubgraphMatching/matching /Users/admin/Desktop/GitHub/SubgraphMatching/build /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching/CMakeFiles/SubgraphMatching.out.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/admin/Desktop/GitHub/subgraphmatching_db_systems /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching/CMakeFiles/SubgraphMatching.out.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : matching/CMakeFiles/SubgraphMatching.out.dir/depend
 

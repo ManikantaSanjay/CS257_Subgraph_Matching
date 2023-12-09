@@ -1,5 +1,5 @@
 matching/CMakeFiles/SubgraphMatching.out.dir/StudyPerformance.cpp.o: \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/matching/StudyPerformance.cpp \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/StudyPerformance.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/chrono \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__availability \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config \
@@ -421,8 +421,8 @@ matching/CMakeFiles/SubgraphMatching.out.dir/StudyPerformance.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/deque \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__split_buffer \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iomanip \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/matching/matchingcommand.h \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/utility/commandparser.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/matchingcommand.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/utility/commandparser.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/vector \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__functional/is_transparent.h \
@@ -430,21 +430,21 @@ matching/CMakeFiles/SubgraphMatching.out.dir/StudyPerformance.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/optional \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__tree \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iostream \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/graph/graph.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/graph/graph.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/unordered_map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__hash_table \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/math.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/math.h \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/configuration/types.h \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/configuration/config.h \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/matching/GenerateFilteringPlan.h \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/matching/FilterVertices.h \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/matching/BuildTable.h \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/utility/QFliter.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/configuration/types.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/configuration/config.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/GenerateFilteringPlan.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/FilterVertices.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/BuildTable.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/utility/QFliter.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/set \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/utility/han/intersection_algos.hpp \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/utility/han/utils/util.hpp \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/utility/han/intersection_algos.hpp \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/utility/han/utils/util.hpp \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/x86intrin.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/ia32intrin.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/immintrin.h \
@@ -546,6 +546,6 @@ matching/CMakeFiles/SubgraphMatching.out.dir/StudyPerformance.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/gethostuuid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/time.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_timeval64.h \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/matching/GenerateQueryPlan.h \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/matching/EvaluateQuery.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/GenerateQueryPlan.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/EvaluateQuery.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/queue
