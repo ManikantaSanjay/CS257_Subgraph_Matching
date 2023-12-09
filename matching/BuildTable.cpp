@@ -1,6 +1,3 @@
-//
-// Created by ssunah on 11/20/18.
-//
 
 #include "BuildTable.h"
 #include <vector>
@@ -10,6 +7,17 @@
 BSRGraph*** BuildTable::qfliter_bsr_graph_;
 #endif
 
+/**
+ * Builds tables for graph matching.
+ *
+ * @param data_graph The data graph.
+ * @param query_graph The query graph.
+ * @param candidates The candidate vertices for each query vertex.
+ * @param candidates_count The number of candidates for each query vertex.
+ * @param edge_matrix The matrix to store the edges between query and data vertices.
+ *
+ * @returns None
+ */
 void BuildTable::buildTables(const Graph *data_graph, const Graph *query_graph, ui **candidates, ui *candidates_count,
                              Edges ***edge_matrix) {
     ui query_vertices_num = query_graph->getVerticesCount();
@@ -134,6 +142,7 @@ void BuildTable::buildTables(const Graph *data_graph, const Graph *query_graph, 
         }
     }
 
+
 #if ENABLE_QFLITER == 1
     qfliter_bsr_graph_ = new BSRGraph**[query_vertices_num];
     for (ui i = 0; i < query_vertices_num; ++i) {
@@ -152,6 +161,14 @@ void BuildTable::buildTables(const Graph *data_graph, const Graph *query_graph, 
 #endif
 }
 
+/**
+ * Prints the cardinality of each table in the given query graph.
+ *
+ * @param query_graph A pointer to the query graph.
+ * @param edge_matrix A pointer to a 2D array of edges.
+ *
+ * @returns None
+ */
 void BuildTable::printTableCardinality(const Graph *query_graph, Edges ***edge_matrix) {
     std::vector<std::pair<std::pair<VertexID, VertexID >, ui>> core_edges;
     std::vector<std::pair<std::pair<VertexID, VertexID >, ui>> tree_edges;
@@ -199,6 +216,17 @@ void BuildTable::printTableCardinality(const Graph *query_graph, Edges ***edge_m
     printf("Total Cardinality: %.1lf\n", sum);
 }
 
+/**
+ * Prints the cardinality information of the tables in the query graph.
+ *
+ * @param query_graph The graph representing the query.
+ * @param tree The tree structure of the query graph.
+ * @param order The order of vertices in the query graph.
+ * @param TE_Candidates The candidate vertices for each TE edge in the query graph.
+ * @param NTE_Candidates The candidate vertices for each NTE edge in the query graph.
+ *
+ * @returns None
+ */
 void BuildTable::printTableCardinality(const Graph *query_graph, TreeNode *tree, ui *order,
                                       std::vector<std::unordered_map<VertexID, std::vector<VertexID >>> &TE_Candidates,
                                       std::vector<std::vector<std::unordered_map<VertexID, std::vector<VertexID>>>> &NTE_Candidates) {
@@ -270,6 +298,14 @@ void BuildTable::printTableCardinality(const Graph *query_graph, TreeNode *tree,
     printf("Total Cardinality: %.1lf\n", sum);
 }
 
+/**
+ * Prints information about the table.
+ *
+ * @param query_graph A pointer to the query graph.
+ * @param edge_matrix A pointer to the edge matrix.
+ *
+ * @returns None
+ */
 void BuildTable::printTableInfo(const Graph *query_graph, Edges ***edge_matrix) {
     ui query_vertices_num = query_graph->getVerticesCount();
     printf("Index Info:\n");
@@ -288,6 +324,15 @@ void BuildTable::printTableInfo(const Graph *query_graph, Edges ***edge_matrix) 
     }
 }
 
+/**
+ * Prints information about a table.
+ *
+ * @param begin_vertex The starting vertex ID.
+ * @param end_vertex The ending vertex ID.
+ * @param edge_matrix A 2D array of edges.
+ *
+ * @returns None
+ */
 void BuildTable::printTableInfo(VertexID begin_vertex, VertexID end_vertex, Edges ***edge_matrix) {
     Edges& edge = *edge_matrix[begin_vertex][end_vertex];
     ui vertex_count = edge.vertex_count_;
@@ -299,6 +344,15 @@ void BuildTable::printTableInfo(VertexID begin_vertex, VertexID end_vertex, Edge
            begin_vertex, end_vertex, edge_count, vertex_count, max_degree, average);
 }
 
+/**
+ * Computes the memory cost in bytes for building a table.
+ *
+ * @param query_graph The query graph.
+ * @param candidates_count The array of candidate counts for each query vertex.
+ * @param edge_matrix The matrix of edges.
+ *
+ * @returns The memory cost in bytes.
+ */
 size_t BuildTable::computeMemoryCostInBytes(const Graph *query_graph, ui *candidates_count, Edges ***edge_matrix) {
     size_t memory_cost_in_bytes = 0;
     size_t per_element_size = sizeof(ui);
@@ -327,6 +381,18 @@ size_t BuildTable::computeMemoryCostInBytes(const Graph *query_graph, ui *candid
     return memory_cost_in_bytes;
 }
 
+/**
+ * Computes the memory cost in bytes for building a table.
+ *
+ * @param query_graph The query graph.
+ * @param candidates_count An array containing the count of candidates for each query vertex.
+ * @param order The order of the query vertices.
+ * @param tree The tree structure representing the query graph.
+ * @param TE_Candidates A vector of unordered maps containing the candidates for each query vertex and its target edge.
+ * @param NTE_Candidates A vector of vectors of unordered maps containing the candidates for each query vertex, its target edge, and its backward neighbor.
+ *
+ * @returns The memory cost in bytes.
+ */
 size_t BuildTable::computeMemoryCostInBytes(const Graph *query_graph, ui *candidates_count, ui *order, TreeNode *tree,
                                             std::vector<std::unordered_map<VertexID, std::vector<VertexID >>> &TE_Candidates,
                                             std::vector<std::vector<std::unordered_map<VertexID, std::vector<VertexID>>>> &NTE_Candidates) {
@@ -342,7 +408,7 @@ size_t BuildTable::computeMemoryCostInBytes(const Graph *query_graph, ui *candid
         VertexID u = order[i];
         TreeNode& u_node = tree[u];
 
-        // NTE_Candidates
+        
         for (ui j = 0; j < u_node.bn_count_; ++j) {
             VertexID u_bn = u_node.bn_[j];
             memory_cost_in_bytes += NTE_Candidates[u][u_bn].size() * per_element_size;
@@ -351,7 +417,7 @@ size_t BuildTable::computeMemoryCostInBytes(const Graph *query_graph, ui *candid
             }
         }
 
-        // TE_Candidates
+        
         memory_cost_in_bytes += TE_Candidates[u].size() * per_element_size;
         for (auto iter = TE_Candidates[u].begin(); iter != TE_Candidates[u].end(); ++iter) {
             memory_cost_in_bytes += iter->second.size() * per_element_size;
