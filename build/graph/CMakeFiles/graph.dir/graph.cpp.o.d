@@ -1,6 +1,6 @@
 graph/CMakeFiles/graph.dir/graph.cpp.o: \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/graph/graph.cpp \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/graph/graph.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/graph/graph.cpp \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/graph/graph.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/unordered_map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config_site \
@@ -423,8 +423,8 @@ graph/CMakeFiles/graph.dir/graph.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_fsfilcnt_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/_types/_nl_item.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/configuration/types.h \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/configuration/config.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/configuration/types.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/configuration/config.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/fstream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/filesystem \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/stack \
@@ -432,7 +432,7 @@ graph/CMakeFiles/graph.dir/graph.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__split_buffer \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iomanip \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/vector \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/utility/graphoperations.h \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/utility/graphoperations.cpp \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/utility/graphoperations.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/utility/graphoperations.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/memory.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/queue

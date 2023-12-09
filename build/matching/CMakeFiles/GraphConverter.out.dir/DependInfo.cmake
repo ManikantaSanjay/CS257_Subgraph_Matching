@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/admin/Desktop/GitHub/SubgraphMatching/matching/GraphConverter.cpp" "matching/CMakeFiles/GraphConverter.out.dir/GraphConverter.cpp.o" "gcc" "matching/CMakeFiles/GraphConverter.out.dir/GraphConverter.cpp.o.d"
+  "/Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/GraphConverter.cpp" "matching/CMakeFiles/GraphConverter.out.dir/GraphConverter.cpp.o" "gcc" "matching/CMakeFiles/GraphConverter.out.dir/GraphConverter.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

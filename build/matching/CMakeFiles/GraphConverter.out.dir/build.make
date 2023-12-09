@@ -53,10 +53,10 @@ RM = /usr/local/Cellar/cmake/3.27.7/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/admin/Desktop/GitHub/SubgraphMatching
+CMAKE_SOURCE_DIR = /Users/admin/Desktop/GitHub/subgraphmatching_db_systems
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/admin/Desktop/GitHub/SubgraphMatching/build
+CMAKE_BINARY_DIR = /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build
 
 # Include any dependencies generated for this target.
 include matching/CMakeFiles/GraphConverter.out.dir/depend.make
@@ -70,18 +70,18 @@ include matching/CMakeFiles/GraphConverter.out.dir/progress.make
 include matching/CMakeFiles/GraphConverter.out.dir/flags.make
 
 matching/CMakeFiles/GraphConverter.out.dir/GraphConverter.cpp.o: matching/CMakeFiles/GraphConverter.out.dir/flags.make
-matching/CMakeFiles/GraphConverter.out.dir/GraphConverter.cpp.o: /Users/admin/Desktop/GitHub/SubgraphMatching/matching/GraphConverter.cpp
+matching/CMakeFiles/GraphConverter.out.dir/GraphConverter.cpp.o: /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/GraphConverter.cpp
 matching/CMakeFiles/GraphConverter.out.dir/GraphConverter.cpp.o: matching/CMakeFiles/GraphConverter.out.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object matching/CMakeFiles/GraphConverter.out.dir/GraphConverter.cpp.o"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT matching/CMakeFiles/GraphConverter.out.dir/GraphConverter.cpp.o -MF CMakeFiles/GraphConverter.out.dir/GraphConverter.cpp.o.d -o CMakeFiles/GraphConverter.out.dir/GraphConverter.cpp.o -c /Users/admin/Desktop/GitHub/SubgraphMatching/matching/GraphConverter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object matching/CMakeFiles/GraphConverter.out.dir/GraphConverter.cpp.o"
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT matching/CMakeFiles/GraphConverter.out.dir/GraphConverter.cpp.o -MF CMakeFiles/GraphConverter.out.dir/GraphConverter.cpp.o.d -o CMakeFiles/GraphConverter.out.dir/GraphConverter.cpp.o -c /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/GraphConverter.cpp
 
 matching/CMakeFiles/GraphConverter.out.dir/GraphConverter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GraphConverter.out.dir/GraphConverter.cpp.i"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Desktop/GitHub/SubgraphMatching/matching/GraphConverter.cpp > CMakeFiles/GraphConverter.out.dir/GraphConverter.cpp.i
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/GraphConverter.cpp > CMakeFiles/GraphConverter.out.dir/GraphConverter.cpp.i
 
 matching/CMakeFiles/GraphConverter.out.dir/GraphConverter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GraphConverter.out.dir/GraphConverter.cpp.s"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Desktop/GitHub/SubgraphMatching/matching/GraphConverter.cpp -o CMakeFiles/GraphConverter.out.dir/GraphConverter.cpp.s
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/GraphConverter.cpp -o CMakeFiles/GraphConverter.out.dir/GraphConverter.cpp.s
 
 # Object files for target GraphConverter.out
 GraphConverter_out_OBJECTS = \
@@ -95,18 +95,18 @@ matching/GraphConverter.out: matching/CMakeFiles/GraphConverter.out.dir/build.ma
 matching/GraphConverter.out: graph/libgraph.dylib
 matching/GraphConverter.out: utility/libutility.dylib
 matching/GraphConverter.out: matching/CMakeFiles/GraphConverter.out.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable GraphConverter.out"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GraphConverter.out.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable GraphConverter.out"
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GraphConverter.out.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 matching/CMakeFiles/GraphConverter.out.dir/build: matching/GraphConverter.out
 .PHONY : matching/CMakeFiles/GraphConverter.out.dir/build
 
 matching/CMakeFiles/GraphConverter.out.dir/clean:
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && $(CMAKE_COMMAND) -P CMakeFiles/GraphConverter.out.dir/cmake_clean.cmake
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && $(CMAKE_COMMAND) -P CMakeFiles/GraphConverter.out.dir/cmake_clean.cmake
 .PHONY : matching/CMakeFiles/GraphConverter.out.dir/clean
 
 matching/CMakeFiles/GraphConverter.out.dir/depend:
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/admin/Desktop/GitHub/SubgraphMatching /Users/admin/Desktop/GitHub/SubgraphMatching/matching /Users/admin/Desktop/GitHub/SubgraphMatching/build /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching/CMakeFiles/GraphConverter.out.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/admin/Desktop/GitHub/subgraphmatching_db_systems /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching/CMakeFiles/GraphConverter.out.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : matching/CMakeFiles/GraphConverter.out.dir/depend
 

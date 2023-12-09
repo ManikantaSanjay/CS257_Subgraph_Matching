@@ -1,7 +1,7 @@
 matching/CMakeFiles/SubgraphMatching.out.dir/BuildTable.cpp.o: \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/matching/BuildTable.cpp \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/matching/BuildTable.h \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/graph/graph.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/BuildTable.cpp \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/BuildTable.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/graph/graph.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/unordered_map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config_site \
@@ -424,9 +424,9 @@ matching/CMakeFiles/SubgraphMatching.out.dir/BuildTable.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/_types/_fsfilcnt_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/_types/_nl_item.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/configuration/types.h \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/configuration/config.h \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/utility/QFliter.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/configuration/types.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/configuration/config.h \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/utility/QFliter.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/vector \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__split_buffer \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/fstream \
@@ -436,8 +436,8 @@ matching/CMakeFiles/SubgraphMatching.out.dir/BuildTable.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/iomanip \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/set \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__tree \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/utility/han/intersection_algos.hpp \
-  /Users/admin/Desktop/GitHub/SubgraphMatching/utility/han/utils/util.hpp \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/utility/han/intersection_algos.hpp \
+  /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/utility/han/utils/util.hpp \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/x86intrin.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/ia32intrin.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include/immintrin.h \

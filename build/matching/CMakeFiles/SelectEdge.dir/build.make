@@ -53,10 +53,10 @@ RM = /usr/local/Cellar/cmake/3.27.7/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/admin/Desktop/GitHub/SubgraphMatching
+CMAKE_SOURCE_DIR = /Users/admin/Desktop/GitHub/subgraphmatching_db_systems
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/admin/Desktop/GitHub/SubgraphMatching/build
+CMAKE_BINARY_DIR = /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build
 
 # Include any dependencies generated for this target.
 include matching/CMakeFiles/SelectEdge.dir/depend.make
@@ -70,18 +70,18 @@ include matching/CMakeFiles/SelectEdge.dir/progress.make
 include matching/CMakeFiles/SelectEdge.dir/flags.make
 
 matching/CMakeFiles/SelectEdge.dir/SelectEdge.cpp.o: matching/CMakeFiles/SelectEdge.dir/flags.make
-matching/CMakeFiles/SelectEdge.dir/SelectEdge.cpp.o: /Users/admin/Desktop/GitHub/SubgraphMatching/matching/SelectEdge.cpp
+matching/CMakeFiles/SelectEdge.dir/SelectEdge.cpp.o: /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/SelectEdge.cpp
 matching/CMakeFiles/SelectEdge.dir/SelectEdge.cpp.o: matching/CMakeFiles/SelectEdge.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object matching/CMakeFiles/SelectEdge.dir/SelectEdge.cpp.o"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT matching/CMakeFiles/SelectEdge.dir/SelectEdge.cpp.o -MF CMakeFiles/SelectEdge.dir/SelectEdge.cpp.o.d -o CMakeFiles/SelectEdge.dir/SelectEdge.cpp.o -c /Users/admin/Desktop/GitHub/SubgraphMatching/matching/SelectEdge.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object matching/CMakeFiles/SelectEdge.dir/SelectEdge.cpp.o"
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT matching/CMakeFiles/SelectEdge.dir/SelectEdge.cpp.o -MF CMakeFiles/SelectEdge.dir/SelectEdge.cpp.o.d -o CMakeFiles/SelectEdge.dir/SelectEdge.cpp.o -c /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/SelectEdge.cpp
 
 matching/CMakeFiles/SelectEdge.dir/SelectEdge.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SelectEdge.dir/SelectEdge.cpp.i"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Desktop/GitHub/SubgraphMatching/matching/SelectEdge.cpp > CMakeFiles/SelectEdge.dir/SelectEdge.cpp.i
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/SelectEdge.cpp > CMakeFiles/SelectEdge.dir/SelectEdge.cpp.i
 
 matching/CMakeFiles/SelectEdge.dir/SelectEdge.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SelectEdge.dir/SelectEdge.cpp.s"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Desktop/GitHub/SubgraphMatching/matching/SelectEdge.cpp -o CMakeFiles/SelectEdge.dir/SelectEdge.cpp.s
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching/SelectEdge.cpp -o CMakeFiles/SelectEdge.dir/SelectEdge.cpp.s
 
 # Object files for target SelectEdge
 SelectEdge_OBJECTS = \
@@ -93,18 +93,18 @@ SelectEdge_EXTERNAL_OBJECTS =
 matching/SelectEdge: matching/CMakeFiles/SelectEdge.dir/SelectEdge.cpp.o
 matching/SelectEdge: matching/CMakeFiles/SelectEdge.dir/build.make
 matching/SelectEdge: matching/CMakeFiles/SelectEdge.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/admin/Desktop/GitHub/SubgraphMatching/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable SelectEdge"
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SelectEdge.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable SelectEdge"
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SelectEdge.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 matching/CMakeFiles/SelectEdge.dir/build: matching/SelectEdge
 .PHONY : matching/CMakeFiles/SelectEdge.dir/build
 
 matching/CMakeFiles/SelectEdge.dir/clean:
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching && $(CMAKE_COMMAND) -P CMakeFiles/SelectEdge.dir/cmake_clean.cmake
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching && $(CMAKE_COMMAND) -P CMakeFiles/SelectEdge.dir/cmake_clean.cmake
 .PHONY : matching/CMakeFiles/SelectEdge.dir/clean
 
 matching/CMakeFiles/SelectEdge.dir/depend:
-	cd /Users/admin/Desktop/GitHub/SubgraphMatching/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/admin/Desktop/GitHub/SubgraphMatching /Users/admin/Desktop/GitHub/SubgraphMatching/matching /Users/admin/Desktop/GitHub/SubgraphMatching/build /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching /Users/admin/Desktop/GitHub/SubgraphMatching/build/matching/CMakeFiles/SelectEdge.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/admin/Desktop/GitHub/subgraphmatching_db_systems /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/matching /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching /Users/admin/Desktop/GitHub/subgraphmatching_db_systems/build/matching/CMakeFiles/SelectEdge.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : matching/CMakeFiles/SelectEdge.dir/depend
 
