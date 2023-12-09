@@ -1,13 +1,13 @@
 
-//          Copyright Louis Delacroix 2010 - 2014.
-// Distributed under the Boost Software License, Version 1.0.
-//    (See accompanying file LICENSE_1_0.txt or copy at
-//          http://www.boost.org/LICENSE_1_0.txt)
-//
-// A pretty printing library for C++
-//
-// Usage:
-// Include this header, and operator<< will "just work".
+
+
+
+
+
+
+
+
+
 
 #ifndef H_PRETTY_PRINT
 #define H_PRETTY_PRINT
@@ -37,7 +37,7 @@ std::string int_to_hex( T i )
 
 namespace pretty_print {
     namespace detail {
-        // SFINAE type trait to detect whether T::const_iterator exists.
+        
 
         struct sfinae_base {
             using yes = char;
@@ -82,10 +82,10 @@ namespace pretty_print {
             static bool const end_value = sizeof(g<T>(nullptr)) == sizeof(yes);
         };
 
-    }  // namespace detail
+    }  
 
 
-    // Holds the delimiter values for a specific character type
+    
 
     template<typename TChar>
     struct delimiters_values {
@@ -96,7 +96,7 @@ namespace pretty_print {
     };
 
 
-    // Defines the delimiter values for a specific container and character type
+    
 
     template<typename T, typename TChar>
     struct delimiters {
@@ -105,9 +105,9 @@ namespace pretty_print {
     };
 
 
-    // Functor to print containers. You can use this directly if you want
-    // to specificy a non-default delimiters type. The printing logic can
-    // be customized by specializing the nested template.
+    
+    
+    
 
     template<typename T,
             typename TChar = char,
@@ -156,7 +156,7 @@ namespace pretty_print {
         const T &container_;
     };
 
-    // Specialization for pairs
+    
 
     template<typename T, typename TChar, typename TCharTraits, typename TDelimiters>
     template<typename T1, typename T2>
@@ -171,7 +171,7 @@ namespace pretty_print {
         }
     };
 
-    // Specialization for tuples
+    
 
     template<typename T, typename TChar, typename TCharTraits, typename TDelimiters>
     template<typename ...Args>
@@ -207,7 +207,7 @@ namespace pretty_print {
         }
     };
 
-    // Prints a print_container_helper to the specified stream.
+    
 
     template<typename T, typename TChar, typename TCharTraits, typename TDelimiters>
     inline std::basic_ostream<TChar, TCharTraits> &operator<<(
@@ -218,7 +218,7 @@ namespace pretty_print {
     }
 
 
-    // Basic is_container template; specialize to derive from std::true_type for all desired container types
+    
 
     template<typename T>
     struct is_container : public std::integral_constant<bool,
@@ -248,7 +248,7 @@ namespace pretty_print {
     };
 
 
-    // Default delimiters
+    
 
     template<typename T>
     struct delimiters<T, char> {
@@ -262,7 +262,7 @@ namespace pretty_print {
     template<typename T> const delimiters_values<wchar_t> delimiters<T, wchar_t>::values = {L"[", L", ", L"]"};
 
 
-    // Delimiters for (multi)set and unordered_(multi)set
+    
 
     template<typename T, typename TComp, typename TAllocator>
     struct delimiters<::std::set<T, TComp, TAllocator>, char> {
@@ -336,7 +336,7 @@ namespace pretty_print {
             L"{", L", ", L"}"};
 
 
-    // Delimiters for pair and tuple
+    
 
     template<typename T1, typename T2>
     struct delimiters<std::pair<T1, T2>, char> {
@@ -366,9 +366,9 @@ namespace pretty_print {
             L"(", L", ", L")"};
 
 
-    // Type-erasing helper class for easy use of custom delimiters.
-    // Requires TCharTraits = std::char_traits<TChar> and TChar = char or wchar_t, and MyDelims needs to be defined for TChar.
-    // Usage: "cout << pretty_print::custom_delims<MyDelims>(x)".
+    
+    
+    
 
     struct custom_delims_base {
         virtual ~custom_delims_base() {}
@@ -409,8 +409,8 @@ namespace pretty_print {
     }
 
 
-    // A wrapper for a C-style array given as pointer-plus-size.
-    // Usage: std::cout << pretty_print_array(arr, n) << std::endl;
+    
+    
 
     template<typename T>
     struct array_wrapper_n {
@@ -429,8 +429,8 @@ namespace pretty_print {
     };
 
 
-    // A wrapper for hash-table based containers that offer local iterators to each bucket.
-    // Usage: std::cout << bucket_print(m, 4) << std::endl;  (Prints bucket 5 of container m.)
+    
+    
 
     template<typename T>
     struct bucket_print_wrapper {
@@ -452,10 +452,10 @@ namespace pretty_print {
         const size_type n;
     };
 
-}   // namespace pretty_print
+}   
 
 
-// Global accessor functions for the convenience wrappers
+
 
 template<typename T>
 inline pretty_print::array_wrapper_n<T> pretty_print_array(const T *const a, size_t n) {
@@ -469,11 +469,11 @@ bucket_print(const T &m, typename T::size_type n) {
 }
 
 
-// Main magic entry point: An overload snuck into namespace std.
-// Can we do better?
+
+
 
 namespace std {
-    // Prints a container to the stream using default delimiters
+    
 
     template<typename T, typename TChar, typename TCharTraits>
     inline typename enable_if<::pretty_print::is_container<T>::value,
@@ -484,4 +484,4 @@ namespace std {
 }
 
 
-#endif  // H_PRETTY_PRINT
+#endif  

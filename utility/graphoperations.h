@@ -1,6 +1,6 @@
-//
-// Created by ssunah on 6/23/18.
-//
+
+
+
 
 #ifndef SUBGRAPHMATCHING_GRAPHOPERATIONS_H
 #define SUBGRAPHMATCHING_GRAPHOPERATIONS_H
@@ -19,4 +19,4 @@ private:
 };
 
 
-#endif //SUBGRAPHMATCHING_GRAPHOPERATIONS_H
+#endif 

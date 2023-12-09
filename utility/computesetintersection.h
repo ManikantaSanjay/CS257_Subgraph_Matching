@@ -1,6 +1,6 @@
-//
-// Created by ssunah on 11/30/17.
-//
+
+
+
 
 #ifndef SUBGRAPHMATCHING_COMPUTE_SET_INTERSECTION_H
 #define SUBGRAPHMATCHING_COMPUTE_SET_INTERSECTION_H
@@ -10,11 +10,9 @@
 #include <immintrin.h>
 #include <x86intrin.h>
 
-/*
- * Because the set intersection is designed for computing common neighbors, the target is uieger.
- */
 
-class ComputeSetIntersection {
+
+class ComputeSetIntersecti>on {
 public:
 #if HYBRID == 0
     static size_t galloping_cnt_;
@@ -70,4 +68,4 @@ public:
 };
 
 
-#endif //FSE_COMPUTESETINTERSECTION_H
+#endif 

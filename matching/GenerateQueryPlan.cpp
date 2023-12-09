@@ -1,7 +1,3 @@
-//
-// Created by ssunah on 11/20/18.
-//
-
 #include "GenerateQueryPlan.h"
 #include "utility/computesetintersection.h"
 #include <vector>
@@ -44,7 +40,7 @@ void GenerateQueryPlan::generateGQLQueryPlan(const Graph *data_graph, const Grap
           order[i] = next_vertex;
      }
 
-     // Pick a pivot randomly.
+     
      for (ui i = 1; i < query_graph->getVerticesCount(); ++i) {
          VertexID u = order[i];
          for (ui j = 0; j < i; ++j) {
@@ -279,7 +275,7 @@ void GenerateQueryPlan::generateCFLQueryPlan(const Graph *data_graph, const Grap
         }
     }
 
-    // Order core paths.
+    
     ui selected_vertices_count = 0;
     order[selected_vertices_count++] = root_vertex;
     visited_vertices[root_vertex] = true;
@@ -296,7 +292,7 @@ void GenerateQueryPlan::generateCFLQueryPlan(const Graph *data_graph, const Grap
             paths_embededdings_num.emplace_back(path_embeddings_num);
         }
 
-        // Select the start path.
+        
         double min_value = std::numeric_limits<double>::max();
         ui selected_path_index = 0;
 
@@ -359,7 +355,7 @@ void GenerateQueryPlan::generateCFLQueryPlan(const Graph *data_graph, const Grap
         }
     }
 
-    // Order tree paths.
+    
     for (auto& tree_paths : forests) {
         std::vector<std::vector<size_t>> paths_embededdings_num;
         for (auto& path : tree_paths) {
@@ -406,7 +402,7 @@ void GenerateQueryPlan::generateCFLQueryPlan(const Graph *data_graph, const Grap
         }
     }
 
-    // Order the leaves.
+    
     while (!leaves.empty()) {
         double min_value = std::numeric_limits<double>::max();
         ui selected_leaf_index = 0;
@@ -555,7 +551,7 @@ void GenerateQueryPlan::generateLeaves(const Graph *query_graph, std::vector<ui>
 void GenerateQueryPlan::checkQueryPlanCorrectness(const Graph *query_graph, ui *order, ui *pivot) {
     ui query_vertices_num = query_graph->getVerticesCount();
     std::vector<bool> visited_vertices(query_vertices_num, false);
-    // Check whether each query vertex is in the order.
+    
     for (ui i = 0; i < query_vertices_num; ++i) {
         VertexID vertex = order[i];
         assert(vertex < query_vertices_num && vertex >= 0);
@@ -568,7 +564,7 @@ void GenerateQueryPlan::checkQueryPlanCorrectness(const Graph *query_graph, ui *
         assert(visited_vertices[vertex]);
     }
 
-    // Check whether the order is connected.
+    
 
     std::fill(visited_vertices.begin(), visited_vertices.end(), false);
     visited_vertices[order[0]] = true;
@@ -626,7 +622,7 @@ void GenerateQueryPlan::generateDSPisoQueryPlan(const Graph *query_graph, Edges 
         pivot[i] = tree[order[i]].parent_;
     }
 
-    // Compute weight array.
+    
     weight_array = new ui*[query_vertices_num];
     for (ui i = 0; i < query_vertices_num; ++i) {
         weight_array[i] = new ui[candidates_count[i]];
@@ -689,7 +685,7 @@ void GenerateQueryPlan::generateRIQueryPlan(const Graph *data_graph, const Graph
     pivot = new ui[query_vertices_num];
 
     std::vector<bool> visited(query_vertices_num, false);
-    // Select the vertex with the maximum degree as the start vertex.
+    
     order[0] = 0;
     for (ui i = 1; i < query_vertices_num; ++i) {
         if (query_graph->getVertexDegree(i) > query_graph->getVertexDegree(order[0])) {
@@ -697,16 +693,16 @@ void GenerateQueryPlan::generateRIQueryPlan(const Graph *data_graph, const Graph
         }
     }
     visited[order[0]] = true;
-    // Order vertices.
+    
     std::vector<ui> tie_vertices;
     std::vector<ui> temp;
 
     for (ui i = 1; i < query_vertices_num; ++i) {
-        // Select the vertices with the maximum number of backward neighbors.
+        
         ui max_bn = 0;
         for (ui u = 0; u < query_vertices_num; ++u) {
             if (!visited[u]) {
-                // Compute the number of backward neighbors of u.
+                
                 ui cur_bn = 0;
                 for (ui j = 0; j < i; ++j) {
                     ui uu = order[j];
@@ -715,7 +711,7 @@ void GenerateQueryPlan::generateRIQueryPlan(const Graph *data_graph, const Graph
                     }
                 }
 
-                // Update the vertices under consideration.
+                
                 if (cur_bn > max_bn) {
                     max_bn = cur_bn;
                     tie_vertices.clear();
@@ -733,9 +729,9 @@ void GenerateQueryPlan::generateRIQueryPlan(const Graph *data_graph, const Graph
             ui count = 0;
             std::vector<ui> u_fn;
             for (auto u : temp) {
-                // Compute the number of vertices in the matching order that has at least one vertex not in the matching order && connected with u.
+                
 
-                // Get the neighbors of u that are not in the matching order.
+                
                 ui un_count;
                 const ui* un = query_graph->getVertexNeighbors(u, un_count);
                 for (ui j = 0; j < un_count; ++j) {
@@ -744,7 +740,7 @@ void GenerateQueryPlan::generateRIQueryPlan(const Graph *data_graph, const Graph
                     }
                 }
 
-                // Compute the valid number of vertices.
+                
                 ui cur_count = 0;
                 for (ui j = 0; j < i; ++j) {
                     ui uu = order[j];
@@ -759,7 +755,7 @@ void GenerateQueryPlan::generateRIQueryPlan(const Graph *data_graph, const Graph
 
                 u_fn.clear();
 
-                // Update the vertices under consideration.
+                
                 if (cur_count > count) {
                     count = cur_count;
                     tie_vertices.clear();
@@ -778,9 +774,9 @@ void GenerateQueryPlan::generateRIQueryPlan(const Graph *data_graph, const Graph
             ui count = 0;
             std::vector<ui> u_fn;
             for (auto u : temp) {
-                // Compute the number of vertices not in the matching order && not the neighbor of vertices in the matching order, but is connected with u.
+                
 
-                // Get the neighbors of u that are not in the matching order.
+                
                 ui un_count;
                 const ui* un = query_graph->getVertexNeighbors(u, un_count);
                 for (ui j = 0; j < un_count; ++j) {
@@ -789,7 +785,7 @@ void GenerateQueryPlan::generateRIQueryPlan(const Graph *data_graph, const Graph
                     }
                 }
 
-                // Compute the valid number of vertices.
+                
                 ui cur_count = 0;
                 for (auto uu : u_fn) {
                     bool valid = true;
@@ -808,7 +804,7 @@ void GenerateQueryPlan::generateRIQueryPlan(const Graph *data_graph, const Graph
 
                 u_fn.clear();
 
-                // Update the vertices under consideration.
+                
                 if (cur_count > count) {
                     count = cur_count;
                     tie_vertices.clear();
@@ -843,7 +839,7 @@ GenerateQueryPlan::generateVF2PPQueryPlan(const Graph *data_graph, const Graph *
 
     ui property_count = 0;
     std::vector<std::vector<ui>> properties(query_vertices_num);
-    std::vector<bool> order_type(query_vertices_num, true);     // True: Ascending, False: Descending.
+    std::vector<bool> order_type(query_vertices_num, true);     
     std::vector<ui> vertices;
     std::vector<bool> in_matching_order(query_vertices_num, false);
 
@@ -851,7 +847,7 @@ GenerateQueryPlan::generateVF2PPQueryPlan(const Graph *data_graph, const Graph *
         properties[i].resize(3);
     }
 
-    // Select the root vertex with the rarest node labels and the largest degree.
+    
     property_count = 2;
     order_type[0] = true;
     order_type[1] = false;
@@ -897,7 +893,7 @@ GenerateQueryPlan::generateVF2PPQueryPlan(const Graph *data_graph, const Graph *
     ui count = 1;
     ui num_vertices_in_matching_order = 1;
     while (num_vertices_in_matching_order < query_vertices_num) {
-        // Get the vertices in current level.
+        
         while (count < query_vertices_num) {
             ui u = bfs_order[count];
             if (tree[u].level_ == level) {
@@ -910,9 +906,9 @@ GenerateQueryPlan::generateVF2PPQueryPlan(const Graph *data_graph, const Graph *
             }
         }
 
-        // Process a level in the BFS tree.
+        
         while(!vertices.empty()) {
-            // Set property.
+            
             for (auto u : vertices) {
                 ui un_count;
                 const ui* un = query_graph->getVertexNeighbors(u, un_count);
@@ -953,7 +949,7 @@ void GenerateQueryPlan::generateOrderSpectrum(const Graph *query_graph, std::vec
     std::vector<bool> visited(query_vertices_num, false);
     std::vector<ui> matching_order;
 
-    // Get the core vertices and the non-core vertices.
+    
     std::vector<ui> core_vertices;
     std::vector<ui> noncore_vertices;
     for (ui u = 0; u < query_vertices_num; ++u) {
@@ -965,7 +961,7 @@ void GenerateQueryPlan::generateOrderSpectrum(const Graph *query_graph, std::vec
         }
     }
 
-    // Sort the vertices by the core value and the degree value.
+    
     auto compare = [query_graph](ui l, ui r) -> bool {
         if (query_graph->getCoreValue(l) != query_graph->getCoreValue(r)) {
             return query_graph->getCoreValue(l) > query_graph->getCoreValue(r);
@@ -980,7 +976,7 @@ void GenerateQueryPlan::generateOrderSpectrum(const Graph *query_graph, std::vec
 
     std::sort(core_vertices.begin(), core_vertices.end(), compare);
     std::sort(noncore_vertices.begin(), noncore_vertices.end(), compare);
-    // Permutate the vertices. Keep the matching order is connected.
+    
 
     std::vector<ui> cur_index(query_vertices_num, 0);
 
@@ -999,11 +995,11 @@ void GenerateQueryPlan::generateOrderSpectrum(const Graph *query_graph, std::vec
             while (cur_index[cur_depth] < candidates.size()) {
                 u = candidates[cur_index[cur_depth]++];
 
-                // If u has been in the matching order, then skip it.
+                
                 if (visited[u])
                     continue;
 
-                // Determine whether u is connected to the vertices in the matching order.
+                
                 bool valid = false;
 
                 for (auto v : matching_order) {
@@ -1016,11 +1012,11 @@ void GenerateQueryPlan::generateOrderSpectrum(const Graph *query_graph, std::vec
                 if (!valid)
                     continue;
 
-                // Update.
+                
                 matching_order.push_back(u);
                 visited[u] = true;
 
-                // All the core vertices are in the matching order.
+                
                 if (matching_order.size() == candidates.size()) {
                     spectrum.emplace_back(matching_order);
 
@@ -1049,7 +1045,7 @@ void GenerateQueryPlan::generateOrderSpectrum(const Graph *query_graph, std::vec
         }
     }
     EXIT:
-    // Order the non-core vertices. All matching orders in the spectrum have the same order of non-core vertices.
+    
     if (!core_vertices.empty()) {
         matching_order.clear();
 
@@ -1082,7 +1078,7 @@ void GenerateQueryPlan::generateOrderSpectrum(const Graph *query_graph, std::vec
         }
     }
 
-    // Check the correctness of each matching order.
+    
     for (auto& order : spectrum) {
         checkQueryPlanCorrectness(query_graph, order.data());
     }
@@ -1091,7 +1087,7 @@ void GenerateQueryPlan::generateOrderSpectrum(const Graph *query_graph, std::vec
 void GenerateQueryPlan::checkQueryPlanCorrectness(const Graph *query_graph, ui *order) {
     ui query_vertices_num = query_graph->getVerticesCount();
     std::vector<bool> visited_vertices(query_vertices_num, false);
-    // Check whether each query vertex is in the order.
+    
     for (ui i = 0; i < query_vertices_num; ++i) {
         VertexID vertex = order[i];
         assert(vertex < query_vertices_num && vertex >= 0);
@@ -1104,7 +1100,7 @@ void GenerateQueryPlan::checkQueryPlanCorrectness(const Graph *query_graph, ui *
         assert(visited_vertices[vertex]);
     }
 
-    // Check whether the order is connected.
+    
 
     std::fill(visited_vertices.begin(), visited_vertices.end(), false);
     visited_vertices[order[0]] = true;

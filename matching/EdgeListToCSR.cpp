@@ -1,6 +1,6 @@
-//
-// Created by yche on 10/29/19.
-//
+
+
+
 #include <cassert>
 #include <algorithm>
 #include <vector>
@@ -12,6 +12,14 @@
 #include <random>
 using namespace std;
 
+/**
+ * Reads an input file containing pairs of integers and returns a sorted vector of pairs representing an edge list.
+ *
+ * @param input_file_path The path to the input file.
+ * @param max_ele The maximum element in the input file.
+ *
+ * @returns A sorted vector of pairs representing an edge list.
+ */
 vector<pair<int, int>> GetEdgeList(string &input_file_path, int &max_ele) {
     vector<pair<int, int>> lines;
 
@@ -32,8 +40,8 @@ vector<pair<int, int>> GetEdgeList(string &input_file_path, int &max_ele) {
             if (first > second) {
                 swap(first, second);
             }
-            // 1st case first == second: skip these self loop, (i,i)
-            // 2nd case first > second: unique (i,j), (j,i)
+            
+            
 
             assert(first < INT32_MAX and second < INT32_MAX);
             if (second > max_ele)
@@ -50,6 +58,13 @@ vector<pair<int, int>> GetEdgeList(string &input_file_path, int &max_ele) {
     return lines;
 };
 
+/**
+ * Checks if the given vector of lines is already in CSR (Compressed Sparse Row) order.
+ *
+ * @param lines The vector of lines representing edges in a graph.
+ *
+ * @returns True if the lines are already in CSR order, False otherwise.
+ */
 bool IsAlreadyCSROrder(vector<pair<int, int>> &lines) {
     int cur_src_vertex = -1;
     int prev_dst_val = -1;
@@ -77,6 +92,18 @@ bool IsAlreadyCSROrder(vector<pair<int, int>> &lines) {
     return true;
 }
 
+/**
+ * Writes data to output files in a specific format.
+ *
+ * @param deg_output_file The path to the degree output file.
+ * @param adj_output_file The path to the adjacency output file.
+ * @param label_output_file The path to the label output file.
+ * @param num_labels The number of labels.
+ * @param lines The vector of pairs representing the edges.
+ * @param max_ele The maximum element in the input data.
+ *
+ * @returns None
+ */
 void WriteToOutputFiles(string &deg_output_file, string &adj_output_file, string& label_output_file, int num_labels,
                         vector<pair<int, int>> &lines, int max_ele) {
     auto vertex_num = static_cast<unsigned long>(max_ele + 1);

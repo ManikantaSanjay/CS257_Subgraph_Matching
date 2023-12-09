@@ -1,6 +1,6 @@
-//
-// Created by Shixuan Sun on 2018/6/29.
-//
+
+
+
 
 #ifndef SUBGRAPHMATCHING_COMMANDPARSER_H
 #define SUBGRAPHMATCHING_COMMANDPARSER_H
@@ -19,4 +19,4 @@ public:
 };
 
 
-#endif //SUBGRAPHMATCHING_COMMANDPARSER_H
+#endif 

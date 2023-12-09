@@ -1,6 +1,6 @@
-//
-// Created by ssunah on 11/21/18.
-//
+
+
+
 
 #include "GenerateFilteringPlan.h"
 #include "FilterVertices.h"
@@ -144,10 +144,10 @@ VertexID GenerateFilteringPlan::selectTSOFilterStartVertex(const Graph *data_gra
     auto rank_compare = [](std::pair<VertexID, double> l, std::pair<VertexID, double> r) {
         return l.second < r.second;
     };
-    // Maximum priority queue.
+    
     std::priority_queue<std::pair<VertexID, double>, std::vector<std::pair<VertexID, double>>, decltype(rank_compare)> rank_queue(rank_compare);
 
-    // Compute the ranking.
+    
     for (ui i = 0; i < query_graph->getVerticesCount(); ++i) {
         VertexID query_vertex = i;
         LabelID label = query_graph->getVertexLabel(query_vertex);
@@ -157,12 +157,12 @@ VertexID GenerateFilteringPlan::selectTSOFilterStartVertex(const Graph *data_gra
         rank_queue.push(std::make_pair(query_vertex, rank));
     }
 
-    // Keep the top-3.
+    
     while (rank_queue.size() > 3) {
         rank_queue.pop();
     }
 
-    // Pick the one with the smallest number of candidates.
+    
     VertexID start_vertex = 0;
     ui min_candidates_num = data_graph->getGraphMaxLabelFrequency() + 1;
     while (!rank_queue.empty()) {
@@ -200,7 +200,7 @@ VertexID GenerateFilteringPlan::selectCFLFilterStartVertex(const Graph *data_gra
 
     std::priority_queue<std::pair<VertexID, double>, std::vector<std::pair<VertexID, double>>, decltype(rank_compare)> rank_queue(rank_compare);
 
-    // Compute the ranking.
+    
     for (ui i = 0; i < query_graph->getVerticesCount(); ++i) {
         VertexID query_vertex = i;
 
@@ -213,7 +213,7 @@ VertexID GenerateFilteringPlan::selectCFLFilterStartVertex(const Graph *data_gra
         }
     }
 
-    // Keep the top-3.
+    
     while (rank_queue.size() > 3) {
         rank_queue.pop();
     }
